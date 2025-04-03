@@ -8,7 +8,7 @@ const HeroSection = () => {
         {/* Left column - Text content */}
         <div className="space-y-6">
           <p className="text-gray-700 uppercase tracking-wide text-sm font-medium">
-            Web3 platform for democratize investments
+            Web3 platform for democratized investments
           </p>
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
             Unlock the unique <span className="text-blue-600">digital property</span> of your investments
@@ -36,13 +36,13 @@ const HeroSection = () => {
             />
             <div className="absolute top-4 right-4 bg-white px-3 py-1 rounded-full text-sm flex items-center">
               <span className="w-2 h-2 bg-pink-500 rounded-full mr-2"></span>
-              Pepperoni
+              Live
             </div>
           </div>
           
           {/* Decorative elements */}
-          <div className="absolute top-4 right-4 w-20 h-20 bg-red-500 rounded-full blur-xl opacity-30 -z-10 animate-pulse"></div>
-          <div className="absolute -bottom-10 -left-10 w-20 h-20 bg-red-500 rounded-full blur-xl opacity-30 -z-10 animate-pulse"></div>
+          <div className="absolute top-4 right-4 w-20 h-20 bg-pink-500 rounded-full blur-xl opacity-30 -z-10 animate-pulse"></div>
+          <div className="absolute -bottom-10 -left-10 w-20 h-20 bg-pink-500 rounded-full blur-xl opacity-30 -z-10 animate-pulse"></div>
         </div>
       </div>
     </div>

@@ -20,7 +20,7 @@ const RealEstateSection = () => {
               <div className="absolute inset-0 flex flex-col justify-between p-4">
                 <div className="flex justify-end">
                   <div className="bg-white rounded-full h-8 w-8 flex items-center justify-center">
-                    <span className="text-black font-bold">Go</span>
+                    <span className="text-black font-bold">→</span>
                   </div>
                 </div>
                 <div>
@@ -45,9 +45,33 @@ const RealEstateSection = () => {
           </div>
 
           {/* Right side - Text content */}
-          <div className="space-y-4 flex flex-col items-center md:items-start text-center md:text-right">
-            <h3 className="text-2xl font-bold">Intelligent Houses Finder® using:</h3>
-            <h3 className="text-2xl font-bold">AI, Blockchain</h3>
+          <div className="space-y-8">
+            <h3 className="text-2xl md:text-3xl font-bold">Intelligent Houses Finder® using:</h3>
+            <div className="space-y-4">
+              <div className="flex items-center space-x-3">
+                <div className="bg-pink-500 h-6 w-6 rounded-full flex items-center justify-center">
+                  <span className="text-white text-sm">1</span>
+                </div>
+                <span className="text-xl">Artificial Intelligence</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <div className="bg-pink-500 h-6 w-6 rounded-full flex items-center justify-center">
+                  <span className="text-white text-sm">2</span>
+                </div>
+                <span className="text-xl">Blockchain Technology</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <div className="bg-pink-500 h-6 w-6 rounded-full flex items-center justify-center">
+                  <span className="text-white text-sm">3</span>
+                </div>
+                <span className="text-xl">Smart Contracts</span>
+              </div>
+            </div>
+            <div className="pt-4">
+              <Button className="bg-pink-500 hover:bg-pink-600 text-white">
+                Explore Properties
+              </Button>
+            </div>
           </div>
         </div>
       </div>
