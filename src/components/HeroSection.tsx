@@ -27,7 +27,7 @@ const HeroSection = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 pt-4">
             <Button size="lg" className="bg-gradient-to-r from-[#FF56BB] to-[#FF8F77] hover:from-[#FF56BB] hover:to-[#FF8F77]/80 text-white shadow-lg shadow-pink-500/30 border-0">
-              <span className="mr-2">🔥</span> Preventa Now - 50%
+              <span className="mr-2">🔥</span> Pre-sale Now - 50%
             </Button>
             <Button size="lg" variant="outline" className="border-2 border-[#FF56BB] text-[#FF56BB] hover:bg-pink-400/10 bg-transparent">
               <span className="mr-2">📄</span> Litepaper DRACMA
