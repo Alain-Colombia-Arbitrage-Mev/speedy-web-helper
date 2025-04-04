@@ -54,7 +54,6 @@ const Header = () => {
           <nav className="hidden md:flex items-center space-x-8">
             <Link to="/" className="text-gray-700 hover:text-[#FF56BB] font-semibold">How it Works</Link>
             <Link to="/" className="text-gray-700 hover:text-[#FF56BB] font-semibold">Presale dapp</Link>
-            <Link to="/" className="text-gray-700 hover:text-[#FF56BB] font-semibold">Staking dapp</Link>
             <Link to="/" className="text-gray-700 hover:text-[#FF56BB] font-semibold">Tokenomics</Link>
             <Link to="/" className="text-gray-700 hover:text-[#FF56BB] font-semibold">Invest</Link>
           </nav>
