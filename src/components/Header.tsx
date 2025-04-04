@@ -2,29 +2,21 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Menu, X, ChevronDown, Moon, Sun } from "lucide-react";
+import { Menu, X, ChevronDown, Moon, Sun, Globe } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Switch } from "@/components/ui/switch";
+import { useTheme } from "@/contexts/ThemeContext";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { useTranslation } from "react-i18next";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(
-    localStorage.getItem("darkMode") === "true" || 
-    window.matchMedia("(prefers-color-scheme: dark)").matches
-  );
   const isMobile = useIsMobile();
-
-  // Initial setup of dark mode
-  useEffect(() => {
-    if (isDarkMode) {
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("darkMode", "true");
-    } else {
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem("darkMode", "false");
-    }
-  }, [isDarkMode]);
+  const { isDarkMode, toggleDarkMode } = useTheme();
+  const { language, setLanguage } = useLanguage();
+  const { t } = useTranslation();
 
   // Handle scroll effect for header
   useEffect(() => {
@@ -46,10 +38,6 @@ const Header = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
-  };
-
   return (
     <header 
       className={`w-full py-6 px-6 md:px-8 lg:px-12 fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -60,7 +48,7 @@ const Header = () => {
           : isDarkMode 
             ? "bg-gray-900" 
             : "bg-white"
-      }`}
+      } ${isDarkMode ? 'dark' : ''}`}
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         {/* Logo */}
@@ -77,10 +65,18 @@ const Header = () => {
         {/* Desktop Navigation */}
         {!isMobile && (
           <nav className="hidden md:flex items-center space-x-8">
-            <Link to="/" className={`${isDarkMode ? 'text-gray-300 hover:text-[#FF56BB]' : 'text-gray-700 hover:text-[#FF56BB]'} font-semibold`}>How it Works</Link>
-            <Link to="/" className={`${isDarkMode ? 'text-gray-300 hover:text-[#FF56BB]' : 'text-gray-700 hover:text-[#FF56BB]'} font-semibold`}>Presale dapp</Link>
-            <Link to="/" className={`${isDarkMode ? 'text-gray-300 hover:text-[#FF56BB]' : 'text-gray-700 hover:text-[#FF56BB]'} font-semibold`}>Tokenomics</Link>
-            <Link to="/" className={`${isDarkMode ? 'text-gray-300 hover:text-[#FF56BB]' : 'text-gray-700 hover:text-[#FF56BB]'} font-semibold`}>Presale</Link>
+            <Link to="/" className={`${isDarkMode ? 'text-gray-300 hover:text-[#FF56BB]' : 'text-gray-700 hover:text-[#FF56BB]'} font-semibold`}>
+              {t('header.howItWorks')}
+            </Link>
+            <Link to="/" className={`${isDarkMode ? 'text-gray-300 hover:text-[#FF56BB]' : 'text-gray-700 hover:text-[#FF56BB]'} font-semibold`}>
+              {t('header.presaleDapp')}
+            </Link>
+            <Link to="/" className={`${isDarkMode ? 'text-gray-300 hover:text-[#FF56BB]' : 'text-gray-700 hover:text-[#FF56BB]'} font-semibold`}>
+              {t('header.tokenomics')}
+            </Link>
+            <Link to="/" className={`${isDarkMode ? 'text-gray-300 hover:text-[#FF56BB]' : 'text-gray-700 hover:text-[#FF56BB]'} font-semibold`}>
+              {t('header.presale')}
+            </Link>
           </nav>
         )}
 
@@ -95,10 +91,37 @@ const Header = () => {
                 <div className={`${isDarkMode ? 'bg-gray-700 text-[#FF56BB]' : 'bg-gray-200 text-[#FF56BB]'} rounded-full h-8 w-8 flex items-center justify-center`}>
                   <span>$</span>
                 </div>
-                <div className={`flex items-center ${isDarkMode ? 'border-gray-700 bg-gray-800' : 'border-gray-300 bg-white'} border rounded-md px-3 py-1`}>
-                  <span className={`font-medium mr-1 ${isDarkMode ? 'text-gray-300' : 'text-[#FF56BB]'}`}>English</span>
-                  <ChevronDown className={`h-4 w-4 ${isDarkMode ? 'text-gray-300' : 'text-[#FF56BB]'}`} />
-                </div>
+                
+                {/* Language Selector */}
+                <Popover>
+                  <PopoverTrigger asChild>
+                    <div className={`flex items-center cursor-pointer ${isDarkMode ? 'border-gray-700 bg-gray-800' : 'border-gray-300 bg-white'} border rounded-md px-3 py-1`}>
+                      <Globe className="h-4 w-4 mr-1" />
+                      <span className={`font-medium ${isDarkMode ? 'text-gray-300' : 'text-[#FF56BB]'}`}>
+                        {language === 'en' ? 'English' : 'Español'}
+                      </span>
+                      <ChevronDown className={`h-4 w-4 ml-1 ${isDarkMode ? 'text-gray-300' : 'text-[#FF56BB]'}`} />
+                    </div>
+                  </PopoverTrigger>
+                  <PopoverContent className={`w-40 p-0 ${isDarkMode ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'}`}>
+                    <div className="py-1">
+                      <button
+                        onClick={() => setLanguage('en')}
+                        className={`w-full text-left px-4 py-2 text-sm ${isDarkMode ? 'text-gray-300 hover:bg-gray-700' : 'text-gray-700 hover:bg-gray-100'} ${language === 'en' ? 'font-bold' : ''}`}
+                      >
+                        {t('header.english')}
+                      </button>
+                      <button
+                        onClick={() => setLanguage('es')}
+                        className={`w-full text-left px-4 py-2 text-sm ${isDarkMode ? 'text-gray-300 hover:bg-gray-700' : 'text-gray-700 hover:bg-gray-100'} ${language === 'es' ? 'font-bold' : ''}`}
+                      >
+                        {t('header.spanish')}
+                      </button>
+                    </div>
+                  </PopoverContent>
+                </Popover>
+                
+                {/* Dark Mode Toggle */}
                 <div className="flex items-center space-x-2">
                   <Switch
                     checked={isDarkMode}
@@ -113,8 +136,9 @@ const Header = () => {
                     )}
                   </div>
                 </div>
+                
                 <Button className="bg-gradient-to-r from-[#FF56BB] to-[#FF8F77] hover:from-[#FF56BB]/90 hover:to-[#FF8F77]/90 text-white">
-                  Connect Wallet
+                  {t('header.connectWallet')}
                 </Button>
               </div>
             </>
@@ -156,11 +180,21 @@ const Header = () => {
             </div>
           </div>
           <div className="flex flex-col items-center space-y-6 p-4">
-            <Link to="/" className={`${isDarkMode ? 'text-gray-300 hover:text-[#FF56BB]' : 'text-gray-700 hover:text-[#FF56BB]'} text-xl`} onClick={() => setIsMenuOpen(false)}>How it Works</Link>
-            <Link to="/" className={`${isDarkMode ? 'text-gray-300 hover:text-[#FF56BB]' : 'text-gray-700 hover:text-[#FF56BB]'} text-xl`} onClick={() => setIsMenuOpen(false)}>Presale dapp</Link>
-            <Link to="/" className={`${isDarkMode ? 'text-gray-300 hover:text-[#FF56BB]' : 'text-gray-700 hover:text-[#FF56BB]'} text-xl`} onClick={() => setIsMenuOpen(false)}>Staking dapp</Link>
-            <Link to="/" className={`${isDarkMode ? 'text-gray-300 hover:text-[#FF56BB]' : 'text-gray-700 hover:text-[#FF56BB]'} text-xl`} onClick={() => setIsMenuOpen(false)}>Tokenomics</Link>
-            <Link to="/" className={`${isDarkMode ? 'text-gray-300 hover:text-[#FF56BB]' : 'text-gray-700 hover:text-[#FF56BB]'} text-xl`} onClick={() => setIsMenuOpen(false)}>Invest</Link>
+            <Link to="/" className={`${isDarkMode ? 'text-gray-300 hover:text-[#FF56BB]' : 'text-gray-700 hover:text-[#FF56BB]'} text-xl`} onClick={() => setIsMenuOpen(false)}>
+              {t('header.howItWorks')}
+            </Link>
+            <Link to="/" className={`${isDarkMode ? 'text-gray-300 hover:text-[#FF56BB]' : 'text-gray-700 hover:text-[#FF56BB]'} text-xl`} onClick={() => setIsMenuOpen(false)}>
+              {t('header.presaleDapp')}
+            </Link>
+            <Link to="/" className={`${isDarkMode ? 'text-gray-300 hover:text-[#FF56BB]' : 'text-gray-700 hover:text-[#FF56BB]'} text-xl`} onClick={() => setIsMenuOpen(false)}>
+              {t('header.stakingDapp')}
+            </Link>
+            <Link to="/" className={`${isDarkMode ? 'text-gray-300 hover:text-[#FF56BB]' : 'text-gray-700 hover:text-[#FF56BB]'} text-xl`} onClick={() => setIsMenuOpen(false)}>
+              {t('header.tokenomics')}
+            </Link>
+            <Link to="/" className={`${isDarkMode ? 'text-gray-300 hover:text-[#FF56BB]' : 'text-gray-700 hover:text-[#FF56BB]'} text-xl`} onClick={() => setIsMenuOpen(false)}>
+              {t('header.invest')}
+            </Link>
             
             <div className="flex items-center space-x-4 mt-6">
               <Switch 
@@ -169,14 +203,47 @@ const Header = () => {
                 className={`${isDarkMode ? 'bg-gray-700' : 'bg-gray-300'}`}
               />
               <span className={`${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
-                {isDarkMode ? 'Dark Mode' : 'Light Mode'}
+                {isDarkMode ? t('header.darkMode') : t('header.lightMode')}
               </span>
             </div>
             
             <div className="flex flex-col w-full space-y-4 mt-6">
-              <Button variant="outline" className={`w-full ${isDarkMode ? 'border-gray-700 text-gray-300 hover:bg-gray-800' : 'border-gray-300 text-gray-700 hover:bg-gray-100'}`} onClick={() => setIsMenuOpen(false)}>Language</Button>
+              {/* Language Dropdown */}
+              <div className="flex justify-center">
+                <Popover>
+                  <PopoverTrigger asChild>
+                    <Button variant="outline" className={`w-full ${isDarkMode ? 'border-gray-700 text-gray-300 hover:bg-gray-800' : 'border-gray-300 text-gray-700 hover:bg-gray-100'}`}>
+                      <Globe className="mr-2 h-4 w-4" />
+                      {language === 'en' ? t('header.english') : t('header.spanish')}
+                      <ChevronDown className="ml-2 h-4 w-4" />
+                    </Button>
+                  </PopoverTrigger>
+                  <PopoverContent className={`w-full p-0 ${isDarkMode ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'}`}>
+                    <div className="py-1">
+                      <button
+                        onClick={() => {
+                          setLanguage('en');
+                          setIsMenuOpen(false);
+                        }}
+                        className={`w-full text-left px-4 py-2 text-sm ${isDarkMode ? 'text-gray-300 hover:bg-gray-700' : 'text-gray-700 hover:bg-gray-100'} ${language === 'en' ? 'font-bold' : ''}`}
+                      >
+                        {t('header.english')}
+                      </button>
+                      <button
+                        onClick={() => {
+                          setLanguage('es');
+                          setIsMenuOpen(false);
+                        }}
+                        className={`w-full text-left px-4 py-2 text-sm ${isDarkMode ? 'text-gray-300 hover:bg-gray-700' : 'text-gray-700 hover:bg-gray-100'} ${language === 'es' ? 'font-bold' : ''}`}
+                      >
+                        {t('header.spanish')}
+                      </button>
+                    </div>
+                  </PopoverContent>
+                </Popover>
+              </div>
               <Button className="w-full bg-gradient-to-r from-[#FF56BB] to-[#FF8F77] hover:from-[#FF56BB]/90 hover:to-[#FF8F77]/90 text-white" onClick={() => setIsMenuOpen(false)}>
-                Connect Wallet
+                {t('header.connectWallet')}
               </Button>
             </div>
           </div>
