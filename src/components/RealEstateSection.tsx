@@ -10,17 +10,16 @@ const RealEstateSection = () => {
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
           <span className="flex items-center justify-center gap-3">
              <div className="flex items-center space-x-3">
-              <img 
+             
+            </div>
+            <span className="text-white">500MM+ Backed Projects</span>
+             <img 
                 src="/lovable-uploads/2be46ee9-76e5-46d6-9525-bf467f04849c.png" 
                 alt="Fire emoji" 
                 className="h-12 w-12"
               />
-              <p className="text-[#FF56BB] uppercase tracking-wide text-sm font-medium">Hot offer</p>
-            </div>
-            <span className="text-white">500MM+ Backed Projects</span>
           </span>
           <p className="text-white mt-2">Web3 for Real state Using AI</p>
-            <Flame className="text-orange-500 h-8 w-8" />
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
