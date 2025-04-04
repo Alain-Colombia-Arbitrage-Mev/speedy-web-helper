@@ -22,11 +22,12 @@ const Navigation = ({ isMobile = false, onMobileItemClick = () => {} }: Navigati
       <Link to="/" className={linkClass} onClick={onMobileItemClick}>
         {t('header.presaleDapp')}
       </Link>
+      {/* Removed the stakingDapp option for mobile */}
       <Link to="/" className={linkClass} onClick={onMobileItemClick}>
-        {isMobile ? t('header.stakingDapp') : t('header.tokenomics')}
+        {isMobile ? t('header.tokenomics') : t('header.tokenomics')}
       </Link>
       <Link to="/" className={linkClass} onClick={onMobileItemClick}>
-        {isMobile ? t('header.tokenomics') : t('header.presale')}
+        {isMobile ? t('header.presale') : t('header.presale')}
       </Link>
       {isMobile && (
         <Link to="/" className={linkClass} onClick={onMobileItemClick}>
