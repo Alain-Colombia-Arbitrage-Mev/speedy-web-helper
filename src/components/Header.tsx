@@ -51,9 +51,11 @@ const Header = () => {
         <div className="flex items-center">
           <Link to="/" className="flex items-center">
             <img 
-              src="/lovable-uploads/b8ec6c3b-b667-47e0-8c79-ac384ac9ef70.png" 
+              src={isDarkMode 
+                ? "/lovable-uploads/203367a9-10e9-4c1b-8a90-bac684e7c854.png" 
+                : "/lovable-uploads/bc49257a-a778-4541-b61f-827711c6164a.png"} 
               alt="Perperzon Logo" 
-              className="h-10 mr-2" 
+              className="h-12 mr-2" 
             />
           </Link>
         </div>

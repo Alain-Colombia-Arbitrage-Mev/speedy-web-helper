@@ -25,7 +25,9 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
         <div className="flex-1"></div>
         <div className="flex justify-center flex-1">
           <img 
-            src="/lovable-uploads/b8ec6c3b-b667-47e0-8c79-ac384ac9ef70.png" 
+            src={isDarkMode 
+              ? "/lovable-uploads/203367a9-10e9-4c1b-8a90-bac684e7c854.png" 
+              : "/lovable-uploads/bc49257a-a778-4541-b61f-827711c6164a.png"} 
             alt="Perperzon Logo" 
             className="h-12" 
           />
