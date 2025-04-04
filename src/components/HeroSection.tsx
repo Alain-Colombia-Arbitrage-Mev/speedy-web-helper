@@ -47,7 +47,6 @@ const HeroSection = () => {
               <span className="w-2 h-2  rounded-full mr-2 animate-pulse"></span>
               <div className="flex items-center">
                 <img src="/lovable-uploads/b8ec6c3b-b667-47e0-8c79-ac384ac9ef70.png"  className="h-5 w-5 mr-2" />
-                Perperzon
               </div>
             </div>
           </div>
