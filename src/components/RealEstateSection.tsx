@@ -284,8 +284,8 @@ const RealEstateSection = () => {
               className="relative z-10 overflow-hidden rounded-lg border-2 border-gray-700 shadow-lg"
             >
               <motion.img 
-                src="https://images.unsplash.com/photo-1621812045324-4bc2d3bdf5ac?q=80&w=2070" 
-                alt="Salar de Atacama lithium mining" 
+                src="/lovable-uploads/a88a5d72-cb06-49e1-98f2-481a147fac12.png" 
+                alt="Salt mounds in lithium mining area" 
                 className="w-full object-cover rounded-lg h-80"
                 initial={{ scale: 1 }}
                 animate={{ 
