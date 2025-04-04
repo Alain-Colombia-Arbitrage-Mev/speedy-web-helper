@@ -46,6 +46,9 @@ const enTranslations = {
     lithiumMiningTitle: 'Chilean Lithium Mining',
     atacamaMining: 'Mining in Salar de Atacama',
     uyuniMining: 'Salar de Uyuni',
+    miningTitle: 'Mining Title of 500 Hectares',
+    miningPermits: 'Active lithium exploration and exploitation permits in operation',
+    mineValue: 'Mine Value: $700,000,000 USD',
     exploreMiningButton: 'Explore Mining Investments',
   },
   fire: {
@@ -128,6 +131,9 @@ const esTranslations = {
     lithiumMiningTitle: 'Minería de Litio Chileno',
     atacamaMining: 'Minería en Salar de Atacama', 
     uyuniMining: 'Salar de Uyuni',
+    miningTitle: 'Título Minero de 500 Hectáreas',
+    miningPermits: 'Permisos activos de exploración y explotación de litio en operación',
+    mineValue: 'Valor de la Mina: $700,000,000 USD',
     exploreMiningButton: 'Explorar Inversiones Mineras',
   },
   fire: {

@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Button } from "@/components/ui/button";
 import { useEffect, useRef } from 'react';
 import { motion } from "framer-motion";
+import { Card, CardContent } from "@/components/ui/card";
 
 const RealEstateSection = () => {
   const { t } = useTranslation();
@@ -202,7 +203,7 @@ const RealEstateSection = () => {
           </motion.div>
         </div>
 
-        {/* New Chilean Lithium Mining Section */}
+        {/* Chilean Lithium Mining Section with Updated Information */}
         <div className="mt-24 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           <motion.div 
             className="space-y-6 text-left"
@@ -212,17 +213,27 @@ const RealEstateSection = () => {
             viewport={{ once: true }}
           >
             <h3 className="text-2xl md:text-3xl font-bold text-gradient-to-r from-blue-400 to-emerald-400">
-              Minería de Litio Chileno
+              {t('realEstate.lithiumMiningTitle')}
             </h3>
-            <motion.p 
-              className="text-xl leading-relaxed"
+            
+            {/* Mining title card with highlight */}
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.5 }}
               viewport={{ once: true }}
+              whileHover={{ scale: 1.02 }}
+              className="mb-4"
             >
-              <span className="font-semibold">Minería en Salar de Atacama:</span> El Salar de Atacama es el yacimiento de litio más importante de Chile y uno de los más grandes del mundo, representando cerca del 35% de las reservas mundiales de litio.
-            </motion.p>
+              <Card className="bg-gradient-to-r from-blue-900/30 to-emerald-900/30 border-emerald-500/30 overflow-hidden">
+                <CardContent className="p-4">
+                  <h4 className="text-xl font-bold text-emerald-400 mb-2">{t('realEstate.miningTitle')}</h4>
+                  <p className="text-gray-100">{t('realEstate.miningPermits')}</p>
+                  <p className="text-2xl font-bold text-emerald-300 mt-3">{t('realEstate.mineValue')}</p>
+                </CardContent>
+              </Card>
+            </motion.div>
+            
             <motion.p 
               className="text-xl leading-relaxed"
               initial={{ opacity: 0, y: 20 }}
@@ -230,18 +241,27 @@ const RealEstateSection = () => {
               transition={{ duration: 0.4, delay: 0.6 }}
               viewport={{ once: true }}
             >
-              <span className="font-semibold">Salar de Uyuni:</span> Situado en Bolivia, es el salar más grande del mundo y contiene la mayor reserva de litio sin explotar. Junto con los salares de Chile y Argentina, forma parte del "Triángulo del Litio" que contiene más del 75% de las reservas mundiales.
+              <span className="font-semibold">{t('realEstate.atacamaMining')}</span> El Salar de Atacama es el yacimiento de litio más importante de Chile y uno de los más grandes del mundo, representando cerca del 35% de las reservas mundiales de litio.
+            </motion.p>
+            <motion.p 
+              className="text-xl leading-relaxed"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 0.7 }}
+              viewport={{ once: true }}
+            >
+              <span className="font-semibold">{t('realEstate.uyuniMining')}</span> Situado en Bolivia, es el salar más grande del mundo y contiene la mayor reserva de litio sin explotar. Junto con los salares de Chile y Argentina, forma parte del "Triángulo del Litio" que contiene más del 75% de las reservas mundiales.
             </motion.p>
             <motion.div 
               className="pt-4"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.7 }}
+              transition={{ duration: 0.4, delay: 0.8 }}
               viewport={{ once: true }}
               whileHover={{ scale: 1.05 }}
             >
               <Button className="bg-gradient-to-r from-emerald-500 to-blue-500 hover:from-emerald-600 hover:to-blue-600 text-white shadow-lg shadow-blue-500/20">
-                Explorar Inversiones Mineras
+                {t('realEstate.exploreMiningButton')}
               </Button>
             </motion.div>
           </motion.div>
