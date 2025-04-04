@@ -1,7 +1,6 @@
 
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { Flame } from "lucide-react";
 
 const RealEstateSection = () => {
   return (
@@ -22,23 +21,16 @@ const RealEstateSection = () => {
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-          {/* Left side - Image grid */}
-          <div className="grid grid-cols-2 gap-4 relative">
+          {/* Left side - Single featured image */}
+          <div className="relative">
             <div className="absolute -top-10 -left-10 w-32 h-32 bg-blue-500 rounded-full blur-3xl opacity-10 z-0"></div>
             <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-purple-500 rounded-full blur-3xl opacity-10 z-0"></div>
             
-            <img src="/lovable-uploads/fd124595-76fa-4129-9643-663fa5c60894.png" alt="Luxury house with pool" className="rounded-lg h-48 w-full object-cover border-2 border-gray-700" />
-            <img src="/lovable-uploads/fd124595-76fa-4129-9643-663fa5c60894.png" alt="Modern house at night" className="rounded-lg h-48 w-full object-cover border-2 border-gray-700" />
-            <img src="/lovable-uploads/fd124595-76fa-4129-9643-663fa5c60894.png" alt="House with garden" className="rounded-lg h-48 w-full object-cover border-2 border-gray-700" />
-            <div className="rounded-lg h-48 w-full bg-gradient-to-br from-gray-800 to-gray-900 p-4 relative border-2 border-gray-700">
-              <div className="absolute inset-0 flex flex-col justify-between p-4">
-                <div className="flex justify-end">
-                  <div className="bg-gray-700 rounded-full h-8 w-8 flex items-center justify-center shadow-md">
-                    <span className="text-blue-400 font-bold">→</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <img 
+              src="/lovable-uploads/7df78f14-c84f-42d5-bd8d-a02986ff690e.png" 
+              alt="Futuristic luxury house with pool" 
+              className="rounded-lg w-full object-cover border-2 border-gray-700 shadow-lg shadow-blue-500/10" 
+            />
           </div>
 
           {/* Right side - Text content */}
