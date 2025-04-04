@@ -19,7 +19,7 @@ const RealEstateSection = () => {
                 className="h-12 w-12"
               />
           </span>
-          <p className="text-white mt-2 text-[22px] font-normal">Web3 for Real state Using AI</p>
+          <p className="text-white mt-2 text-[20px] font-normal">Web3 for Real state Using AI</p>
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
