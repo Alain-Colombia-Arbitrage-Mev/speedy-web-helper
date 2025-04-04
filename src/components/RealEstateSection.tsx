@@ -57,7 +57,7 @@ const RealEstateSection = () => {
               </div>
             </div>
             <div className="pt-4">
-              <Button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white shadow-lg shadow-blue-500/20">
+              <Button className="bg-gradient-to-r from-[#FF56BB] to-[#FF8F77] hover:from-[#FF56BB] hover:to-[#FF8F77]/90 text-white shadow-lg shadow-pink-500/20">
                 Explore Properties
               </Button>
             </div>
