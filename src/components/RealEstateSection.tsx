@@ -9,15 +9,14 @@ const RealEstateSection = () => {
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
           <span className="flex items-center justify-center gap-3">
-             <div className="flex items-center space-x-3">
-             
+            <div className="flex items-center space-x-3">
             </div>
             <span className="text-white">500MM+ Backed Projects</span>
-             <img 
-                src="/lovable-uploads/2be46ee9-76e5-46d6-9525-bf467f04849c.png" 
-                alt="Fire emoji" 
-                className="h-12 w-12"
-              />
+            <img 
+              src="/lovable-uploads/2be46ee9-76e5-46d6-9525-bf467f04849c.png" 
+              alt="Fire emoji" 
+              className="h-12 w-12"
+            />
           </span>
           <p className="text-white mt-2 text-[22px] font-normal">Web3 for Real state Using AI</p>
         </h2>
@@ -36,9 +35,6 @@ const RealEstateSection = () => {
                 <div className="flex justify-end">
                   <div className="bg-gray-700 rounded-full h-8 w-8 flex items-center justify-center shadow-md">
                     <span className="text-blue-400 font-bold">→</span>
-                  </div>
-                </div>
-                
                   </div>
                 </div>
               </div>
