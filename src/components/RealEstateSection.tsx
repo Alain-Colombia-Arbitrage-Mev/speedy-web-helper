@@ -63,6 +63,31 @@ const RealEstateSection = () => {
             </div>
           </div>
         </div>
+
+        {/* New Property Sharing Section */}
+        <div className="mt-24 grid grid-cols-1 md:grid-cols-2 gap-12 items-center bg-[#0D0E10] rounded-xl p-8">
+          <div className="relative">
+            <img 
+              src="/lovable-uploads/6dee9b01-b03c-4b9e-9f2d-78add40c32cf.png" 
+              alt="Property sharing grid" 
+              className="w-full rounded-lg"
+            />
+          </div>
+          <div className="space-y-6 text-right">
+            <h3 className="text-2xl md:text-3xl font-bold">Fractional Ownership</h3>
+            <p className="text-xl leading-relaxed">
+              Enables investors to acquire fractional square meters in high-quality properties,
+            </p>
+            <p className="text-xl leading-relaxed">
+              Making real estate investment accessible to a broader audience.
+            </p>
+            <div className="pt-4 flex justify-end">
+              <Button className="bg-gradient-to-r from-[#FF56BB] to-[#FF8F77] hover:from-[#FF56BB] hover:to-[#FF8F77]/90 text-white shadow-lg shadow-pink-500/20">
+                Learn More
+              </Button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
