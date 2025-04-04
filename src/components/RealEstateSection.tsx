@@ -13,7 +13,7 @@ const RealEstateSection = () => {
               
             
             </div>
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">500MM+ Backed Projects</span>
+            <span className="text-white">500MM+ Backed Projects</span>
            <img 
                 src="/lovable-uploads/2be46ee9-76e5-46d6-9525-bf467f04849c.png" 
                 alt="Fire emoji" 
