@@ -101,6 +101,14 @@ const Header = () => {
       {/* Mobile Menu */}
       {isMobile && isMenuOpen && (
         <div className="md:hidden fixed inset-0 bg-white z-50 pt-20">
+          {/* Add logo at the top of the mobile menu */}
+          <div className="flex justify-center mb-6">
+            <img 
+              src="/lovable-uploads/b8ec6c3b-b667-47e0-8c79-ac384ac9ef70.png" 
+              alt="Perperzon Logo" 
+              className="h-12" 
+            />
+          </div>
           <div className="flex flex-col items-center space-y-6 p-4">
             <Link to="/" className="text-gray-700 hover:text-[#FF56BB] text-xl" onClick={() => setIsMenuOpen(false)}>How it Works</Link>
             <Link to="/" className="text-gray-700 hover:text-[#FF56BB] text-xl" onClick={() => setIsMenuOpen(false)}>Presale dapp</Link>
