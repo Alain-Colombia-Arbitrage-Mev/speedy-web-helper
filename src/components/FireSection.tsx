@@ -43,7 +43,7 @@ const CountdownTimer = () => {
   }, []);
   
   return (
-    <div className="flex justify-center space-x-4 mt-6">
+    <div className="flex justify-start space-x-4 mt-6">
       <div className="flex flex-col items-center">
         <div className="text-4xl font-bold text-white bg-[#1c1d21] py-3 px-4 rounded-lg border border-gray-700 min-w-[80px] text-center">
           {timeLeft.days}
@@ -98,7 +98,7 @@ const FireSection = () => {
             {/* Countdown Timer */}
             <CountdownTimer />
             
-            <div className="pt-6 flex justify-center">
+            <div className="pt-6 flex justify-start">
               <Button size="lg" className="bg-gradient-to-r from-[#FF56BB] to-[#FF8F77] hover:from-[#FF56BB] hover:to-[#FF8F77]/80 text-white shadow-lg shadow-[#FF56BB]/20 border-0">
                 <Flame className="w-5 h-5 mr-2" /> {t('fire.joinButton')}
               </Button>
