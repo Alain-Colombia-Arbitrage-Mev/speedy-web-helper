@@ -17,10 +17,10 @@ const RealEstateSection = () => {
               />
               <p className="text-[#FF56BB] uppercase tracking-wide text-sm font-medium">Hot offer</p>
             </div>
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">500MM+ Backed Projects</span>
-             <p> className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">Web3 for Real state Using AI </p>
-            <Flame className="text-orange-500 h-8 w-8" />
+            <span className="text-white">500MM+ Backed Projects</span>
           </span>
+          <p className="text-white mt-2">Web3 for Real state Using AI</p>
+            <Flame className="text-orange-500 h-8 w-8" />
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
