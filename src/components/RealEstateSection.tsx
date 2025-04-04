@@ -29,6 +29,8 @@ const RealEstateSection = () => {
             <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-purple-500 rounded-full blur-3xl opacity-10 z-0"></div>
             
             <img src="/lovable-uploads/fd124595-76fa-4129-9643-663fa5c60894.png" alt="Luxury house with pool" className="rounded-lg h-48 w-full object-cover border-2 border-gray-700" />
+            <img src="/lovable-uploads/fd124595-76fa-4129-9643-663fa5c60894.png" alt="Modern house at night" className="rounded-lg h-48 w-full object-cover border-2 border-gray-700" />
+            <img src="/lovable-uploads/fd124595-76fa-4129-9643-663fa5c60894.png" alt="House with garden" className="rounded-lg h-48 w-full object-cover border-2 border-gray-700" />
             <div className="rounded-lg h-48 w-full bg-gradient-to-br from-gray-800 to-gray-900 p-4 relative border-2 border-gray-700">
               <div className="absolute inset-0 flex flex-col justify-between p-4">
                 <div className="flex justify-end">
@@ -36,21 +38,7 @@ const RealEstateSection = () => {
                     <span className="text-blue-400 font-bold">→</span>
                   </div>
                 </div>
-                <div>
-                  <div className="text-xs text-gray-400 mb-2">Savannakhet/Laos</div>
-                  <div className="grid grid-cols-3 gap-2 text-xs">
-                    <div className="bg-gray-800/70 backdrop-blur-sm rounded p-1 text-center shadow-sm">
-                      <div className="font-bold text-blue-400">312K+</div>
-                      <div className="text-gray-300">Renters</div>
-                    </div>
-                    <div className="bg-gray-800/70 backdrop-blur-sm rounded p-1 text-center shadow-sm">
-                      <div className="font-bold text-blue-400">83%</div>
-                      <div className="text-gray-300">Occupancy</div>
-                    </div>
-                    <div className="bg-gray-800/70 backdrop-blur-sm rounded p-1 text-center shadow-sm">
-                      <div className="font-bold text-blue-400">500G$</div>
-                      <div className="text-gray-300">Avg Daily Rate</div>
-                    </div>
+                
                   </div>
                 </div>
               </div>
