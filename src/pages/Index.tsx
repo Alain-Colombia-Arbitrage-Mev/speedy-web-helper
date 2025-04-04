@@ -4,6 +4,7 @@ import HeroSection from "@/components/HeroSection";
 import StatsBanner from "@/components/StatsBanner";
 import RealEstateSection from "@/components/RealEstateSection";
 import FireSection from "@/components/FireSection";
+import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const Index = () => {
@@ -25,6 +26,9 @@ const Index = () => {
       
       {/* Fire Section */}
       <FireSection />
+      
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };

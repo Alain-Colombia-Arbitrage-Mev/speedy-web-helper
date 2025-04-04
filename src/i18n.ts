@@ -1,4 +1,3 @@
-
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
@@ -54,6 +53,25 @@ const enTranslations = {
     launchPrice: 'Launch Price',
     roiPotential: 'ROI Potential',
     presaleProgress: 'Presale Progress',
+  },
+  footer: {
+    tagline: 'Democratizing real estate investments through blockchain technology',
+    quickLinks: 'Quick Links',
+    home: 'Home',
+    about: 'About Us',
+    tokenomics: 'Tokenomics',
+    roadmap: 'Roadmap',
+    resources: 'Resources',
+    whitepaper: 'Whitepaper',
+    faq: 'FAQ',
+    documentation: 'Documentation',
+    developers: 'Developers',
+    contact: 'Contact',
+    address: '123 Blockchain Street, Crypto City, 10101',
+    allRightsReserved: 'All Rights Reserved',
+    privacyPolicy: 'Privacy Policy',
+    termsOfService: 'Terms of Service',
+    cookies: 'Cookies',
   },
   notFound: {
     title: '404',
@@ -113,6 +131,25 @@ const esTranslations = {
     launchPrice: 'Precio de Lanzamiento',
     roiPotential: 'Potencial de ROI',
     presaleProgress: 'Progreso de Preventa',
+  },
+  footer: {
+    tagline: 'Democratizando las inversiones inmobiliarias mediante la tecnología blockchain',
+    quickLinks: 'Enlaces Rápidos',
+    home: 'Inicio',
+    about: 'Nosotros',
+    tokenomics: 'Tokenómica',
+    roadmap: 'Hoja de Ruta',
+    resources: 'Recursos',
+    whitepaper: 'Papel Blanco',
+    faq: 'Preguntas Frecuentes',
+    documentation: 'Documentación',
+    developers: 'Desarrolladores',
+    contact: 'Contacto',
+    address: 'Calle Blockchain 123, Ciudad Crypto, 10101',
+    allRightsReserved: 'Todos los Derechos Reservados',
+    privacyPolicy: 'Política de Privacidad',
+    termsOfService: 'Términos de Servicio',
+    cookies: 'Cookies',
   },
   notFound: {
     title: '404',
