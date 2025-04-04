@@ -14,19 +14,17 @@ const CountdownTimer = () => {
   });
 
   useEffect(() => {
-    // Set end date as 90 days from now
-    const endDate = new Date();
-    endDate.setDate(endDate.getDate() + 90);
+    // Set a fixed end date (July 15, 2025)
+    const endDate = new Date("2025-07-15T00:00:00");
     
-    const timer = setInterval(() => {
+    const calculateTimeLeft = () => {
       const now = new Date();
       const difference = endDate.getTime() - now.getTime();
       
       if (difference <= 0) {
         // Timer expired
-        clearInterval(timer);
         setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-        return;
+        return false;
       }
       
       // Calculate remaining time
@@ -36,7 +34,15 @@ const CountdownTimer = () => {
       const seconds = Math.floor((difference % (1000 * 60)) / 1000);
       
       setTimeLeft({ days, hours, minutes, seconds });
-    }, 1000);
+      return true;
+    };
+    
+    // Initial calculation
+    const shouldContinue = calculateTimeLeft();
+    if (!shouldContinue) return;
+    
+    // Update every second
+    const timer = setInterval(calculateTimeLeft, 1000);
     
     // Cleanup timer on component unmount
     return () => clearInterval(timer);
@@ -61,6 +67,12 @@ const CountdownTimer = () => {
           {timeLeft.minutes}
         </div>
         <span className="mt-2 text-gray-400">{t('fire.minutes')}</span>
+      </div>
+      <div className="flex flex-col items-center">
+        <div className="text-4xl font-bold text-white bg-[#1c1d21] py-3 px-4 rounded-lg border border-gray-700 min-w-[80px] text-center">
+          {timeLeft.seconds}
+        </div>
+        <span className="mt-2 text-gray-400">{t('fire.seconds')}</span>
       </div>
     </div>
   );
