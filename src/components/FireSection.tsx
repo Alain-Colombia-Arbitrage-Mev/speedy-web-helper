@@ -98,7 +98,7 @@ const FireSection = () => {
             {/* Countdown Timer */}
             <CountdownTimer />
             
-            <div className="pt-6">
+            <div className="pt-6 flex justify-center">
               <Button size="lg" className="bg-gradient-to-r from-[#FF56BB] to-[#FF8F77] hover:from-[#FF56BB] hover:to-[#FF8F77]/80 text-white shadow-lg shadow-[#FF56BB]/20 border-0">
                 <Flame className="w-5 h-5 mr-2" /> {t('fire.joinButton')}
               </Button>
