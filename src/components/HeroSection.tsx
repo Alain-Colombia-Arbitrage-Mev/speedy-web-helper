@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
 import { useTheme } from "@/contexts/ThemeContext";
@@ -125,9 +126,11 @@ const HeroSection = () => {
               </a>
             </motion.div>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Button size="lg" variant="outline" className={`border-2 border-[#FF56BB] text-[#FF56BB] hover:bg-pink-400/10 bg-transparent ${isDarkMode ? 'border-pink-400 text-pink-400' : ''}`}>
-                <span className="mr-2">📄</span> {t('hero.litepaperButton')}
-              </Button>
+              <a href="https://dracma.gitbook.io/dracma" target="_blank" rel="noopener noreferrer">
+                <Button size="lg" variant="outline" className={`border-2 border-[#FF56BB] text-[#FF56BB] hover:bg-pink-400/10 bg-transparent ${isDarkMode ? 'border-pink-400 text-pink-400' : ''}`}>
+                  <span className="mr-2">📄</span> {t('hero.litepaperButton')}
+                </Button>
+              </a>
             </motion.div>
           </motion.div>
         </motion.div>
