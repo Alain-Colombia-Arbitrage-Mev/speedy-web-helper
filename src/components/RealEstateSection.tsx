@@ -19,7 +19,7 @@ const RealEstateSection = () => {
                 className="h-12 w-12"
               />
           </span>
-          <p className="text-white mt-2 text-[22px] font-normal">Web3 for Real state Using AI</p>
+          <p className="text-white mt-2 text-[18px] font-normal">Web3 for Real state Using AI</p>
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
@@ -28,9 +28,21 @@ const RealEstateSection = () => {
             <div className="absolute -top-10 -left-10 w-32 h-32 bg-blue-500 rounded-full blur-3xl opacity-10 z-0"></div>
             <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-purple-500 rounded-full blur-3xl opacity-10 z-0"></div>
             
-            <img src="/lovable-uploads/fd124595-76fa-4129-9643-663fa5c60894.png" alt="Luxury house with pool" className="rounded-lg h-48 w-full object-cover border-2 border-gray-700" />
-            <img src="/lovable-uploads/fd124595-76fa-4129-9643-663fa5c60894.png" alt="Modern house at night" className="rounded-lg h-48 w-full object-cover border-2 border-gray-700" />
-            <img src="/lovable-uploads/fd124595-76fa-4129-9643-663fa5c60894.png" alt="House with garden" className="rounded-lg h-48 w-full object-cover border-2 border-gray-700" />
+            <img 
+              src="/lovable-uploads/0cb516c0-2e06-411b-b2e1-fb1382260279.png" 
+              alt="Luxury futuristic house with illuminated elements" 
+              className="rounded-lg h-48 w-full object-cover border-2 border-gray-700" 
+            />
+            <img 
+              src="/lovable-uploads/0cb516c0-2e06-411b-b2e1-fb1382260279.png" 
+              alt="Modern house with pool at sunset" 
+              className="rounded-lg h-48 w-full object-cover border-2 border-gray-700 object-[-100%_center]" 
+            />
+            <img 
+              src="/lovable-uploads/0cb516c0-2e06-411b-b2e1-fb1382260279.png" 
+              alt="Futuristic house with lavender garden" 
+              className="rounded-lg h-48 w-full object-cover border-2 border-gray-700 object-[-200%_center]" 
+            />
             <div className="rounded-lg h-48 w-full bg-gradient-to-br from-gray-800 to-gray-900 p-4 relative border-2 border-gray-700">
               <div className="absolute inset-0 flex flex-col justify-between p-4">
                 <div className="flex justify-end">
