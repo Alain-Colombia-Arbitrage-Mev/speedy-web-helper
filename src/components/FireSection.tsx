@@ -1,4 +1,3 @@
-
 import { useTranslation } from 'react-i18next';
 import { Button } from "@/components/ui/button";
 import { Flame } from "lucide-react";
@@ -14,12 +13,9 @@ const CountdownTimer = () => {
   });
 
   useEffect(() => {
-    // Set a fixed start date (January 15, 2025)
-    const startDate = new Date("2025-01-15T00:00:00");
-    
-    // Calculate end date as exactly 90 days from the start date
-    const endDate = new Date(startDate);
-    endDate.setDate(startDate.getDate() + 90);
+    // Set fixed start date (April 4, 2025) and end date (July 4, 2025)
+    const startDate = new Date("2025-04-04T00:00:00");
+    const endDate = new Date("2025-07-04T00:00:00");
     
     const calculateTimeLeft = () => {
       const now = new Date();
