@@ -57,6 +57,27 @@ const HeroSection = () => {
           <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-gradient-to-r from-[#FF56BB] to-red-500 rounded-full blur-3xl opacity-30 -z-10"></div>
         </div>
       </div>
+
+      {/* Wave effect at the bottom of the section */}
+      <div className="absolute bottom-0 left-0 w-full">
+        <svg 
+          xmlns="http://www.w3.org/2000/svg" 
+          viewBox="0 0 1440 120" 
+          className="w-full h-auto"
+          preserveAspectRatio="none"
+        >
+          <path 
+            fill="#000" 
+            fillOpacity="0.05"
+            d="M0,32L60,53.3C120,75,240,117,360,117.3C480,117,600,75,720,64C840,53,960,75,1080,80C1200,85,1320,75,1380,69.3L1440,64L1440,120L1380,120C1320,120,1200,120,1080,120C960,120,840,120,720,120C600,120,480,120,360,120C240,120,120,120,60,120L0,120Z"
+          ></path>
+          <path 
+            fill="#0EA5E9" 
+            fillOpacity="0.1"
+            d="M0,64L60,69.3C120,75,240,85,360,80C480,75,600,53,720,48C840,43,960,53,1080,69.3C1200,85,1320,107,1380,117.3L1440,128L1440,120L1380,120C1320,120,1200,120,1080,120C960,120,840,120,720,120C600,120,480,120,360,120C240,120,120,120,60,120L0,120Z"
+          ></path>
+        </svg>
+      </div>
     </div>
   );
 };
