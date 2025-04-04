@@ -10,15 +10,15 @@ const RealEstateSection = () => {
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
           <span className="flex items-center justify-center gap-3">
              <div className="flex items-center space-x-3">
-              <img 
+              
+            
+            </div>
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">500MM+ Backed Projects</span>
+           <img 
                 src="/lovable-uploads/2be46ee9-76e5-46d6-9525-bf467f04849c.png" 
                 alt="Fire emoji" 
                 className="h-12 w-12"
               />
-              <p className="text-[#FF56BB] uppercase tracking-wide text-sm font-medium">Hot offer</p>
-            </div>
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">500MM+ Backed Projects</span>
-            <Flame className="text-orange-500 h-8 w-8" />
           </span>
         </h2>
 
