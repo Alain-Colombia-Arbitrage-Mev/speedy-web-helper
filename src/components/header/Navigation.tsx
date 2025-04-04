@@ -20,14 +20,13 @@ const Navigation = ({ isMobile = false, onMobileItemClick = () => {} }: Navigati
         {t('header.howItWorks')}
       </Link>
       <Link to="/" className={linkClass} onClick={onMobileItemClick}>
-        {t('header.presaleDapp')}
+        {t('header.presale')}
       </Link>
-      {/* Removed the stakingDapp option for mobile */}
+      <Link to="/projects" className={linkClass} onClick={onMobileItemClick}>
+        {t('header.projects')}
+      </Link>
       <Link to="/" className={linkClass} onClick={onMobileItemClick}>
         {isMobile ? t('header.tokenomics') : t('header.tokenomics')}
-      </Link>
-      <Link to="/" className={linkClass} onClick={onMobileItemClick}>
-        {isMobile ? t('header.presale') : t('header.presale')}
       </Link>
       {isMobile && (
         <Link to="/" className={linkClass} onClick={onMobileItemClick}>
