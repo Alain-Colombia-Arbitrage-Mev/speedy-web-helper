@@ -1,8 +1,10 @@
 
-import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Button } from "@/components/ui/button";
 
 const FireSection = () => {
+  const { t } = useTranslation();
+  
   return (
     <div className="w-full bg-[#141518] text-white py-16 px-4 md:px-8 relative overflow-hidden">
       <div className="max-w-7xl mx-auto">
@@ -16,21 +18,22 @@ const FireSection = () => {
                 alt="Fire emoji" 
                 className="h-12 w-12"
               />
-              <p className="text-[#FF56BB] uppercase tracking-wide text-sm font-medium">Hot offer</p>
+              <p className="text-[#FF56BB] uppercase tracking-wide text-sm font-medium">{t('fire.hotOffer')}</p>
             </div>
             
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">
-              Get <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF56BB] to-[#FF8F77]">exclusive access</span> to our presale
+              {t('fire.title').split('exclusive access').map((part, i) => 
+                i === 0 ? part : <><span key={i} className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF56BB] to-[#FF8F77]">exclusive access</span>{part.substring('exclusive access'.length)}</>
+              )}
             </h2>
             
             <p className="text-gray-400 text-lg">
-              Join our community and be part of the next generation of real estate investment.
-              Limited slots available for early investors.
+              {t('fire.description')}
             </p>
             
             <div className="pt-6">
               <Button size="lg" className="bg-gradient-to-r from-[#FF56BB] to-[#FF8F77] hover:from-[#FF56BB] hover:to-[#FF8F77]/80 text-white shadow-lg shadow-[#FF56BB]/20 border-0">
-                Join Presale Now
+                {t('fire.joinButton')}
               </Button>
             </div>
           </div>
@@ -41,28 +44,28 @@ const FireSection = () => {
             
             <div className="flex flex-col space-y-6">
               <div className="flex justify-between items-center border-b border-gray-700 pb-4">
-                <span className="text-gray-400">Total Raised</span>
+                <span className="text-gray-400">{t('fire.totalRaised')}</span>
                 <span className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF56BB] to-[#FF8F77]">$3.5M+</span>
               </div>
               
               <div className="flex justify-between items-center border-b border-gray-700 pb-4">
-                <span className="text-gray-400">Presale Price</span>
+                <span className="text-gray-400">{t('fire.presalePrice')}</span>
                 <span className="text-2xl font-bold">$0.25</span>
               </div>
               
               <div className="flex justify-between items-center border-b border-gray-700 pb-4">
-                <span className="text-gray-400">Launch Price</span>
+                <span className="text-gray-400">{t('fire.launchPrice')}</span>
                 <span className="text-2xl font-bold">$0.50</span>
               </div>
               
               <div className="flex justify-between items-center pb-4">
-                <span className="text-gray-400">ROI Potential</span>
+                <span className="text-gray-400">{t('fire.roiPotential')}</span>
                 <span className="text-2xl font-bold text-green-500">+100%</span>
               </div>
               
               <div className="bg-[#252629] p-4 rounded-lg mt-2">
                 <div className="flex justify-between mb-2">
-                  <span className="text-gray-400">Presale Progress</span>
+                  <span className="text-gray-400">{t('fire.presaleProgress')}</span>
                   <span className="text-white font-medium">65%</span>
                 </div>
                 <div className="w-full bg-gray-700 rounded-full h-2.5">

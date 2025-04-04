@@ -1,8 +1,10 @@
 
-import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Button } from "@/components/ui/button";
 
 const RealEstateSection = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="w-full bg-[#141518] text-white py-16 px-4 md:px-8 font-clash">
       <div className="max-w-7xl mx-auto">
@@ -10,14 +12,14 @@ const RealEstateSection = () => {
           <span className="flex items-center justify-center gap-3">
             <div className="flex items-center space-x-3">
             </div>
-            <span className="text-white">500MM+ Backed Projects</span>
+            <span className="text-white">{t('realEstate.title')}</span>
             <img 
               src="/lovable-uploads/2be46ee9-76e5-46d6-9525-bf467f04849c.png" 
               alt="Fire emoji" 
               className="h-12 w-12"
             />
           </span>
-          <p className="text-white mt-2 text-[22px] font-normal">Web3 for Real state Using AI</p>
+          <p className="text-white mt-2 text-[22px] font-normal">{t('realEstate.subtitle')}</p>
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
@@ -35,30 +37,30 @@ const RealEstateSection = () => {
 
           {/* Right side - Text content */}
           <div className="space-y-8">
-            <h3 className="text-2xl md:text-3xl font-bold">Intelligent Houses Finder® using:</h3>
+            <h3 className="text-2xl md:text-3xl font-bold">{t('realEstate.finder')}</h3>
             <div className="space-y-6">
               <div className="flex items-center space-x-4">
                 <div className="bg-gradient-to-r from-blue-500 to-purple-600 h-8 w-8 rounded-full flex items-center justify-center">
                   <span className="text-white text-sm font-bold">1</span>
                 </div>
-                <span className="text-xl">Artificial Intelligence</span>
+                <span className="text-xl">{t('realEstate.tech1')}</span>
               </div>
               <div className="flex items-center space-x-4">
                 <div className="bg-gradient-to-r from-blue-500 to-purple-600 h-8 w-8 rounded-full flex items-center justify-center">
                   <span className="text-white text-sm font-bold">2</span>
                 </div>
-                <span className="text-xl">Blockchain Technology</span>
+                <span className="text-xl">{t('realEstate.tech2')}</span>
               </div>
               <div className="flex items-center space-x-4">
                 <div className="bg-gradient-to-r from-blue-500 to-purple-600 h-8 w-8 rounded-full flex items-center justify-center">
                   <span className="text-white text-sm font-bold">3</span>
                 </div>
-                <span className="text-xl">Smart Contracts</span>
+                <span className="text-xl">{t('realEstate.tech3')}</span>
               </div>
             </div>
             <div className="pt-4">
               <Button className="bg-gradient-to-r from-[#FF56BB] to-[#FF8F77] hover:from-[#FF56BB] hover:to-[#FF8F77]/90 text-white shadow-lg shadow-pink-500/20">
-                Explore Properties
+                {t('realEstate.exploreButton')}
               </Button>
             </div>
           </div>
@@ -74,16 +76,16 @@ const RealEstateSection = () => {
             />
           </div>
           <div className="space-y-6 text-left">
-            <h3 className="text-2xl md:text-3xl font-bold">Fractional Ownership</h3>
+            <h3 className="text-2xl md:text-3xl font-bold">{t('realEstate.fractionalTitle')}</h3>
             <p className="text-xl leading-relaxed">
-              Enables investors to acquire fractional square meters in high-quality properties,
+              {t('realEstate.fractionalDesc1')}
             </p>
             <p className="text-xl leading-relaxed">
-              Making real estate investment accessible to a broader audience.
+              {t('realEstate.fractionalDesc2')}
             </p>
             <div className="pt-4">
               <Button className="bg-gradient-to-r from-[#FF56BB] to-[#FF8F77] hover:from-[#FF56BB] hover:to-[#FF8F77]/90 text-white shadow-lg shadow-pink-500/20">
-                Learn More
+                {t('realEstate.learnMoreButton')}
               </Button>
             </div>
           </div>
