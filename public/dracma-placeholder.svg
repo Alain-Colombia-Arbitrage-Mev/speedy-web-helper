@@ -1,0 +1,8 @@
+
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#111827"/>
+  <path d="M400 150L450 250H350L400 150Z" fill="#3B82F6"/>
+  <path d="M320 280H480V380H320V280Z" fill="#3B82F6"/>
+  <path d="M400 410L450 510H350L400 410Z" fill="#3B82F6"/>
+  <text x="400" y="570" font-family="Arial" font-size="24" text-anchor="middle" fill="white">DRACMA</text>
+</svg>
