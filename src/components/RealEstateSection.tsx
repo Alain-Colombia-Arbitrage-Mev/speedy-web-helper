@@ -216,7 +216,7 @@ const RealEstateSection = () => {
               {t('realEstate.lithiumMiningTitle')}
             </h3>
             
-            {/* Mining title card with highlight */}
+            {/* Mining title card with highlight - Updated for better readability */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -241,7 +241,7 @@ const RealEstateSection = () => {
               transition={{ duration: 0.4, delay: 0.6 }}
               viewport={{ once: true }}
             >
-              <span className="font-semibold">{t('realEstate.atacamaMining')}</span> El Salar de Atacama es el yacimiento de litio más importante de Chile y uno de los más grandes del mundo, representando cerca del 35% de las reservas mundiales de litio.
+              <span className="font-semibold text-blue-300">{t('realEstate.atacamaMining')}</span> El Salar de Atacama es el yacimiento de litio más importante de Chile y uno de los más grandes del mundo, representando cerca del 35% de las reservas mundiales de litio.
             </motion.p>
             <motion.p 
               className="text-xl leading-relaxed"
@@ -250,7 +250,7 @@ const RealEstateSection = () => {
               transition={{ duration: 0.4, delay: 0.7 }}
               viewport={{ once: true }}
             >
-              <span className="font-semibold">{t('realEstate.uyuniMining')}</span> Situado en Bolivia, es el salar más grande del mundo y contiene la mayor reserva de litio sin explotar. Junto con los salares de Chile y Argentina, forma parte del "Triángulo del Litio" que contiene más del 75% de las reservas mundiales.
+              <span className="font-semibold text-blue-300">{t('realEstate.uyuniMining')}</span> Situado en Bolivia, es el salar más grande del mundo y contiene la mayor reserva de litio sin explotar. Junto con los salares de Chile y Argentina, forma parte del "Triángulo del Litio" que contiene más del 75% de las reservas mundiales.
             </motion.p>
             <motion.div 
               className="pt-4"
@@ -260,7 +260,7 @@ const RealEstateSection = () => {
               viewport={{ once: true }}
               whileHover={{ scale: 1.05 }}
             >
-              <Button className="bg-gradient-to-r from-emerald-500 to-blue-500 hover:from-emerald-600 hover:to-blue-600 text-white shadow-lg shadow-blue-500/20">
+              <Button className="bg-gradient-to-r from-[#FF56BB] to-[#FF8F77] hover:from-[#FF56BB] hover:to-[#FF8F77]/90 text-white shadow-lg shadow-pink-500/20">
                 {t('realEstate.exploreMiningButton')}
               </Button>
             </motion.div>
