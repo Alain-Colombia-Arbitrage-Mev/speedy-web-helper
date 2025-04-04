@@ -212,7 +212,7 @@ const RealEstateSection = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-2xl md:text-3xl font-bold text-gradient-to-r from-blue-400 to-emerald-400">
+            <h3 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
               {t('realEstate.lithiumMiningTitle')}
             </h3>
             
@@ -225,10 +225,10 @@ const RealEstateSection = () => {
               whileHover={{ scale: 1.02 }}
               className="mb-4"
             >
-              <Card className="bg-gradient-to-r from-blue-900/30 to-emerald-900/30 border-emerald-500/30 overflow-hidden">
+              <Card className="bg-gradient-to-r from-blue-900/40 to-emerald-900/40 border-emerald-500/30 overflow-hidden">
                 <CardContent className="p-4">
-                  <h4 className="text-xl font-bold text-emerald-400 mb-2">{t('realEstate.miningTitle')}</h4>
-                  <p className="text-gray-100">{t('realEstate.miningPermits')}</p>
+                  <h4 className="text-xl font-bold text-white mb-2">{t('realEstate.miningTitle')}</h4>
+                  <p className="text-gray-200">{t('realEstate.miningPermits')}</p>
                   <p className="text-2xl font-bold text-emerald-300 mt-3">{t('realEstate.mineValue')}</p>
                 </CardContent>
               </Card>
