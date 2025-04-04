@@ -30,7 +30,7 @@ const HeroSection = () => {
               <span className="mr-2">🔥</span> Preventa Now - 50%
             </Button>
             <Button size="lg" variant="outline" className="border-2 border-[#FF56BB] text-[#FF56BB] hover:bg-pink-400/10 bg-transparent">
-              <span className="mr-2">📄</span> Litepaper
+              <span className="mr-2">📄</span> Litepaper DRACMA
             </Button>
           </div>
         </div>
