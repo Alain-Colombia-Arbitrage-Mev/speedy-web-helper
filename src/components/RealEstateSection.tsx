@@ -201,6 +201,89 @@ const RealEstateSection = () => {
             </motion.div>
           </motion.div>
         </div>
+
+        {/* New Chilean Lithium Mining Section */}
+        <div className="mt-24 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+          <motion.div 
+            className="space-y-6 text-left"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            viewport={{ once: true }}
+          >
+            <h3 className="text-2xl md:text-3xl font-bold text-gradient-to-r from-blue-400 to-emerald-400">
+              Minería de Litio Chileno
+            </h3>
+            <motion.p 
+              className="text-xl leading-relaxed"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 0.5 }}
+              viewport={{ once: true }}
+            >
+              <span className="font-semibold">Minería en Salar de Atacama:</span> El Salar de Atacama es el yacimiento de litio más importante de Chile y uno de los más grandes del mundo, representando cerca del 35% de las reservas mundiales de litio.
+            </motion.p>
+            <motion.p 
+              className="text-xl leading-relaxed"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <span className="font-semibold">Salar de Uyuni:</span> Situado en Bolivia, es el salar más grande del mundo y contiene la mayor reserva de litio sin explotar. Junto con los salares de Chile y Argentina, forma parte del "Triángulo del Litio" que contiene más del 75% de las reservas mundiales.
+            </motion.p>
+            <motion.div 
+              className="pt-4"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 0.7 }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.05 }}
+            >
+              <Button className="bg-gradient-to-r from-emerald-500 to-blue-500 hover:from-emerald-600 hover:to-blue-600 text-white shadow-lg shadow-blue-500/20">
+                Explorar Inversiones Mineras
+              </Button>
+            </motion.div>
+          </motion.div>
+          
+          <motion.div 
+            className="relative order-first md:order-last"
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            <div className="absolute -top-10 -right-10 w-32 h-32 bg-emerald-500 rounded-full blur-3xl opacity-20 z-0"></div>
+            <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-blue-500 rounded-full blur-3xl opacity-20 z-0"></div>
+            
+            <motion.div
+              whileHover={{ 
+                scale: 1.05,
+                boxShadow: "0 20px 30px -10px rgba(2, 1, 50, 0.5)"
+              }}
+              transition={{ duration: 0.5 }}
+              className="relative z-10 overflow-hidden rounded-lg border-2 border-gray-700 shadow-lg"
+            >
+              <motion.img 
+                src="https://images.unsplash.com/photo-1621812045324-4bc2d3bdf5ac?q=80&w=2070" 
+                alt="Salar de Atacama lithium mining" 
+                className="w-full object-cover rounded-lg h-80"
+                initial={{ scale: 1 }}
+                animate={{ 
+                  scale: [1, 1.05, 1],
+                  rotate: [0, 1, 0]
+                }}
+                transition={{ 
+                  duration: 12,
+                  repeat: Infinity,
+                  repeatType: "reverse",
+                  ease: "easeInOut"
+                }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+            </motion.div>
+          </motion.div>
+        </div>
       </div>
     </div>
   );

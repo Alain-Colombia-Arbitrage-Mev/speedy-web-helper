@@ -1,3 +1,4 @@
+
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
@@ -42,6 +43,10 @@ const enTranslations = {
     fractionalDesc1: 'Enables investors to acquire fractional square meters in high-quality properties,',
     fractionalDesc2: 'Making real estate investment accessible to a broader audience.',
     learnMoreButton: 'Learn More',
+    lithiumMiningTitle: 'Chilean Lithium Mining',
+    atacamaMining: 'Mining in Salar de Atacama',
+    uyuniMining: 'Salar de Uyuni',
+    exploreMiningButton: 'Explore Mining Investments',
   },
   fire: {
     hotOffer: 'Hot offer',
@@ -120,6 +125,10 @@ const esTranslations = {
     fractionalDesc1: 'Permite a los inversores adquirir metros cuadrados fraccionados en propiedades de alta calidad,',
     fractionalDesc2: 'Haciendo que la inversión inmobiliaria sea accesible para un público más amplio.',
     learnMoreButton: 'Saber Más',
+    lithiumMiningTitle: 'Minería de Litio Chileno',
+    atacamaMining: 'Minería en Salar de Atacama', 
+    uyuniMining: 'Salar de Uyuni',
+    exploreMiningButton: 'Explorar Inversiones Mineras',
   },
   fire: {
     hotOffer: 'Oferta Especial',
