@@ -102,19 +102,24 @@ const Header = () => {
       {isMobile && isMenuOpen && (
         <div className="md:hidden fixed inset-0 bg-white z-50 pt-20 px-6">
           {/* Add logo and close button at the top of the mobile menu */}
-          <div className="flex justify-center items-center relative mb-6">
-            <img 
-              src="/lovable-uploads/b8ec6c3b-b667-47e0-8c79-ac384ac9ef70.png" 
-              alt="Perperzon Logo" 
-              className="h-12" 
-            />
-            <button 
-              onClick={toggleMenu}
-              className="absolute right-4 p-2 text-black rounded-full hover:bg-gray-100"
-              aria-label="Close menu"
-            >
-              <X size={24} />
-            </button>
+          <div className="flex items-center justify-between w-full absolute top-6 left-0 right-0 px-6">
+            <div className="flex-1"></div>
+            <div className="flex justify-center flex-1">
+              <img 
+                src="/lovable-uploads/b8ec6c3b-b667-47e0-8c79-ac384ac9ef70.png" 
+                alt="Perperzon Logo" 
+                className="h-12" 
+              />
+            </div>
+            <div className="flex justify-end flex-1">
+              <button 
+                onClick={toggleMenu}
+                className="p-2 text-black rounded-full hover:bg-gray-100"
+                aria-label="Close menu"
+              >
+                <X size={24} />
+              </button>
+            </div>
           </div>
           <div className="flex flex-col items-center space-y-6 p-4">
             <Link to="/" className="text-gray-700 hover:text-[#FF56BB] text-xl" onClick={() => setIsMenuOpen(false)}>How it Works</Link>
