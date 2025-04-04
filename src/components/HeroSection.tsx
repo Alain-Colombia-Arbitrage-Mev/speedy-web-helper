@@ -37,7 +37,7 @@ const HeroSection = () => {
         
         {/* Right column - Image with decorative elements */}
         <div className="relative">
-          <div className="rounded-3xl overflow-hidden shadow-2xl relative z-10 border-4 border-gray-100 bg-white p-2">
+          <div className="rounded-3xl overflow-hidden shadow-2xl relative z-10 bg-white p-2">
             <img 
               src="/lovable-uploads/2ca1133b-6cd8-42a2-ad78-e526b7d73a87.png" 
               alt="3D House Model"
