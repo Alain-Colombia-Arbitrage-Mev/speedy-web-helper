@@ -3,7 +3,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useTheme } from '@/contexts/ThemeContext';
 import { useTranslation } from 'react-i18next';
-import { Github, Twitter, Facebook, Linkedin, Globe } from 'lucide-react';
+import { Github } from 'lucide-react';
+import { MessageCircle } from 'lucide-react';
 
 const Footer = () => {
   const { isDarkMode } = useTheme();
@@ -25,15 +26,27 @@ const Footer = () => {
             <h3 className={`font-bold text-xl mb-4 ${textClass}`}>DRACMA</h3>
             <p className={`${textClass} mb-4`}>{t('footer.tagline')}</p>
             <div className="flex space-x-4">
-              <a href="https://twitter.com" target="_blank" rel="noreferrer" aria-label="Twitter">
-                <Twitter className={iconClass} />
+              {/* X (Twitter) */}
+              <a href="https://x.com" target="_blank" rel="noreferrer" aria-label="X">
+                <svg xmlns="http://www.w3.org/2000/svg" className={iconClass} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M4 4l11.733 16h4.267l-11.733 -16z" />
+                  <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />
+                </svg>
               </a>
-              <a href="https://facebook.com" target="_blank" rel="noreferrer" aria-label="Facebook">
-                <Facebook className={iconClass} />
+              {/* WhatsApp */}
+              <a href="https://whatsapp.com" target="_blank" rel="noreferrer" aria-label="WhatsApp">
+                <svg xmlns="http://www.w3.org/2000/svg" className={iconClass} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+                  <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
+                </svg>
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn">
-                <Linkedin className={iconClass} />
+              {/* Telegram */}
+              <a href="https://telegram.org" target="_blank" rel="noreferrer" aria-label="Telegram">
+                <svg xmlns="http://www.w3.org/2000/svg" className={iconClass} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4" />
+                </svg>
               </a>
+              {/* GitHub */}
               <a href="https://github.com" target="_blank" rel="noreferrer" aria-label="GitHub">
                 <Github className={iconClass} />
               </a>
@@ -84,7 +97,7 @@ const Footer = () => {
             <p className={`${textClass} mb-2`}>contact@dracma.io</p>
             <p className={`${textClass} mb-4`}>{t('footer.address')}</p>
             <div className="flex items-center">
-              <Globe className={`w-4 h-4 mr-2 ${textClass}`} />
+              <MessageCircle className={`w-4 h-4 mr-2 ${textClass}`} />
               <span className={textClass}>dracma.io</span>
             </div>
           </div>
