@@ -229,7 +229,6 @@ const RealEstateSection = () => {
                 <CardContent className="p-4">
                   <h4 className="text-xl font-bold text-white mb-2">{t('realEstate.miningTitle')}</h4>
                   <p className="text-gray-200">{t('realEstate.miningPermits')}</p>
-                  <p className="text-2xl font-bold text-emerald-300 mt-3">{t('realEstate.mineValue')}</p>
                 </CardContent>
               </Card>
             </motion.div>
