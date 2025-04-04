@@ -1,73 +1,54 @@
-# Welcome to your Lovable project
 
-## Project info
+# Dracma - Digital Property Investments
 
-**URL**: https://lovable.dev/projects/2ae22bc6-d841-4117-b2a2-ac750d9c8b8c
+## Overview
 
-## How can I edit this code?
+Dracma is a revolutionary platform that allows users to invest in digital properties through blockchain technology. Our platform unlocks new investment opportunities across various sectors including real estate, lithium mining, e-commerce, and more.
 
-There are several ways of editing your application.
+## Key Features
 
-**Use Lovable**
+- **Fractional Property Ownership**: Invest in high-value properties with minimal capital through tokenization
+- **Chilean Lithium Mining**: Access to strategic mining investments in the "Lithium Triangle" region
+- **Blockchain Technology**: Secure, transparent, and efficient investment tracking
+- **Digital Property Tokens**: Own digital assets backed by real-world value
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/2ae22bc6-d841-4117-b2a2-ac750d9c8b8c) and start prompting.
+## Technology Stack
 
-Changes made via Lovable will be committed automatically to this repo.
+This project is built with modern web technologies:
 
-**Use your preferred IDE**
+- React
+- TypeScript
+- Tailwind CSS
+- shadcn/ui components
+- Framer Motion for animations
+- i18n for internationalization
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## Getting Started
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+To run this project locally:
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Clone the repository
+git clone <repository-url>
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Navigate to the project directory
+cd dracma
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start the development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## Deployment
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+The application is deployed at [https://dracma.io](https://dracma.io)
 
-**Use GitHub Codespaces**
+## Contact
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+For more information, reach out to us at:
+- Email: info@dracma.io
+- Twitter: [@dracma](https://twitter.com/dracma)
 
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/2ae22bc6-d841-4117-b2a2-ac750d9c8b8c) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes it is!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+© 2025 Dracma. All rights reserved.
