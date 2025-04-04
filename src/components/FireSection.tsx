@@ -1,6 +1,7 @@
 
 import { useTranslation } from 'react-i18next';
 import { Button } from "@/components/ui/button";
+import { Flame } from "lucide-react";
 
 const FireSection = () => {
   const { t } = useTranslation();
@@ -33,7 +34,7 @@ const FireSection = () => {
             
             <div className="pt-6">
               <Button size="lg" className="bg-gradient-to-r from-[#FF56BB] to-[#FF8F77] hover:from-[#FF56BB] hover:to-[#FF8F77]/80 text-white shadow-lg shadow-[#FF56BB]/20 border-0">
-                {t('fire.joinButton')}
+                <Flame className="w-5 h-5 mr-2" /> {t('fire.joinButton')}
               </Button>
             </div>
           </div>
