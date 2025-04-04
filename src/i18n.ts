@@ -1,4 +1,3 @@
-
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
@@ -61,6 +60,9 @@ const enTranslations = {
     launchPrice: 'Launch Price',
     roiPotential: 'ROI Potential',
     presaleProgress: 'Presale Progress',
+    days: 'Days',
+    hours: 'Hours',
+    minutes: 'Minutes',
   },
   footer: {
     tagline: 'Democratizing real estate investments through blockchain technology',
@@ -146,6 +148,9 @@ const esTranslations = {
     launchPrice: 'Precio de Lanzamiento',
     roiPotential: 'Potencial de ROI',
     presaleProgress: 'Progreso de Preventa',
+    days: 'Días',
+    hours: 'Horas',
+    minutes: 'Minutos',
   },
   footer: {
     tagline: 'Democratizando las inversiones inmobiliarias mediante la tecnología blockchain',

@@ -2,6 +2,69 @@
 import { useTranslation } from 'react-i18next';
 import { Button } from "@/components/ui/button";
 import { Flame } from "lucide-react";
+import { useEffect, useState } from 'react';
+
+const CountdownTimer = () => {
+  const { t } = useTranslation();
+  const [timeLeft, setTimeLeft] = useState({
+    days: 90,
+    hours: 0,
+    minutes: 0,
+    seconds: 0
+  });
+
+  useEffect(() => {
+    // Set end date as 90 days from now
+    const endDate = new Date();
+    endDate.setDate(endDate.getDate() + 90);
+    
+    const timer = setInterval(() => {
+      const now = new Date();
+      const difference = endDate.getTime() - now.getTime();
+      
+      if (difference <= 0) {
+        // Timer expired
+        clearInterval(timer);
+        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+        return;
+      }
+      
+      // Calculate remaining time
+      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+      
+      setTimeLeft({ days, hours, minutes, seconds });
+    }, 1000);
+    
+    // Cleanup timer on component unmount
+    return () => clearInterval(timer);
+  }, []);
+  
+  return (
+    <div className="flex justify-center space-x-4 mt-6">
+      <div className="flex flex-col items-center">
+        <div className="text-4xl font-bold text-white bg-[#1c1d21] py-3 px-4 rounded-lg border border-gray-700 min-w-[80px] text-center">
+          {timeLeft.days}
+        </div>
+        <span className="mt-2 text-gray-400">{t('fire.days')}</span>
+      </div>
+      <div className="flex flex-col items-center">
+        <div className="text-4xl font-bold text-white bg-[#1c1d21] py-3 px-4 rounded-lg border border-gray-700 min-w-[80px] text-center">
+          {timeLeft.hours}
+        </div>
+        <span className="mt-2 text-gray-400">{t('fire.hours')}</span>
+      </div>
+      <div className="flex flex-col items-center">
+        <div className="text-4xl font-bold text-white bg-[#1c1d21] py-3 px-4 rounded-lg border border-gray-700 min-w-[80px] text-center">
+          {timeLeft.minutes}
+        </div>
+        <span className="mt-2 text-gray-400">{t('fire.minutes')}</span>
+      </div>
+    </div>
+  );
+};
 
 const FireSection = () => {
   const { t } = useTranslation();
@@ -31,6 +94,9 @@ const FireSection = () => {
             <p className="text-gray-400 text-lg">
               {t('fire.description')}
             </p>
+            
+            {/* Countdown Timer */}
+            <CountdownTimer />
             
             <div className="pt-6">
               <Button size="lg" className="bg-gradient-to-r from-[#FF56BB] to-[#FF8F77] hover:from-[#FF56BB] hover:to-[#FF8F77]/80 text-white shadow-lg shadow-[#FF56BB]/20 border-0">
