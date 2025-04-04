@@ -6,7 +6,7 @@ import RealEstateSection from "@/components/RealEstateSection";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex flex-col bg-black">
+    <div className="min-h-screen flex flex-col bg-white">
       {/* Header */}
       <Header />
       
