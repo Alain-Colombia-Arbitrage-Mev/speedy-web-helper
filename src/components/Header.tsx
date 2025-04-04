@@ -41,21 +41,22 @@ const Header = () => {
         <div className="flex items-center">
           <Link to="/" className="flex items-center">
             <img 
-              src="/lovable-uploads/d20fdeb8-37b0-4313-8504-f9b509c3fd43.png" 
-              alt="Dracma Logo" 
-              className="h-14 mr-2" 
+              src="/lovable-uploads/b8ec6c3b-b667-47e0-8c79-ac384ac9ef70.png" 
+              alt="Perperzon Logo" 
+              className="h-10 mr-2" 
             />
+            <span className="text-xl font-bold">Perperzon</span>
           </Link>
         </div>
 
         {/* Desktop Navigation */}
         {!isMobile && (
           <nav className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-gray-700 hover:text-blue-600 font-semibold">How it Works</Link>
-            <Link to="/" className="text-gray-700 hover:text-blue-600 font-semibold">Presale dapp</Link>
-            <Link to="/" className="text-gray-700 hover:text-blue-600 font-semibold">Staking dapp</Link>
-            <Link to="/" className="text-gray-700 hover:text-blue-600 font-semibold">Tokenomics</Link>
-            <Link to="/" className="text-gray-700 hover:text-blue-600 font-semibold">Invest</Link>
+            <Link to="/" className="text-gray-700 hover:text-[#FF56BB] font-semibold">How it Works</Link>
+            <Link to="/" className="text-gray-700 hover:text-[#FF56BB] font-semibold">Presale dapp</Link>
+            <Link to="/" className="text-gray-700 hover:text-[#FF56BB] font-semibold">Staking dapp</Link>
+            <Link to="/" className="text-gray-700 hover:text-[#FF56BB] font-semibold">Tokenomics</Link>
+            <Link to="/" className="text-gray-700 hover:text-[#FF56BB] font-semibold">Invest</Link>
           </nav>
         )}
 
@@ -64,13 +65,13 @@ const Header = () => {
           {!isMobile && (
             <>
               <div className="flex items-center space-x-4">
-                <div className="bg-gray-200 text-purple-700 rounded-full h-8 w-8 flex items-center justify-center">
+                <div className="bg-gray-200 text-[#FF56BB] rounded-full h-8 w-8 flex items-center justify-center">
                   <span>?</span>
                 </div>
-                <div className="bg-gray-200 text-purple-700 rounded-full h-8 w-8 flex items-center justify-center">
+                <div className="bg-gray-200 text-[#FF56BB] rounded-full h-8 w-8 flex items-center justify-center">
                   <span>$</span>
                 </div>
-                <div className="flex items-center border border-gray-300 text-blue-600 rounded-md px-3 py-1">
+                <div className="flex items-center border border-gray-300 text-[#FF56BB] rounded-md px-3 py-1">
                   <span className="font-medium mr-1">English</span>
                   <ChevronDown className="h-4 w-4" />
                 </div>
@@ -79,7 +80,7 @@ const Header = () => {
                     <div className="bg-white w-4 h-4 rounded-full shadow-md transform translate-x-4"></div>
                   </div>
                 </div>
-                <Button className="bg-gray-700 hover:bg-gray-800 text-white">
+                <Button className="bg-gradient-to-r from-[#FF56BB] to-[#FF8F77] hover:from-[#FF56BB]/90 hover:to-[#FF8F77]/90 text-white">
                   Connect Wallet
                 </Button>
               </div>
@@ -102,14 +103,14 @@ const Header = () => {
       {isMobile && isMenuOpen && (
         <div className="md:hidden fixed inset-0 bg-white z-50 pt-20">
           <div className="flex flex-col items-center space-y-6 p-4">
-            <Link to="/" className="text-gray-700 hover:text-blue-400 text-xl" onClick={() => setIsMenuOpen(false)}>How it Works</Link>
-            <Link to="/" className="text-gray-700 hover:text-blue-400 text-xl" onClick={() => setIsMenuOpen(false)}>Presale dapp</Link>
-            <Link to="/" className="text-gray-700 hover:text-blue-400 text-xl" onClick={() => setIsMenuOpen(false)}>Staking dapp</Link>
-            <Link to="/" className="text-gray-700 hover:text-blue-400 text-xl" onClick={() => setIsMenuOpen(false)}>Tokenomics</Link>
-            <Link to="/" className="text-gray-700 hover:text-blue-400 text-xl" onClick={() => setIsMenuOpen(false)}>Invest</Link>
+            <Link to="/" className="text-gray-700 hover:text-[#FF56BB] text-xl" onClick={() => setIsMenuOpen(false)}>How it Works</Link>
+            <Link to="/" className="text-gray-700 hover:text-[#FF56BB] text-xl" onClick={() => setIsMenuOpen(false)}>Presale dapp</Link>
+            <Link to="/" className="text-gray-700 hover:text-[#FF56BB] text-xl" onClick={() => setIsMenuOpen(false)}>Staking dapp</Link>
+            <Link to="/" className="text-gray-700 hover:text-[#FF56BB] text-xl" onClick={() => setIsMenuOpen(false)}>Tokenomics</Link>
+            <Link to="/" className="text-gray-700 hover:text-[#FF56BB] text-xl" onClick={() => setIsMenuOpen(false)}>Invest</Link>
             <div className="flex flex-col w-full space-y-4 mt-6">
               <Button variant="outline" className="w-full border-gray-300 text-gray-700 hover:bg-gray-100" onClick={() => setIsMenuOpen(false)}>Language</Button>
-              <Button className="w-full bg-gray-700 hover:bg-gray-800 text-white" onClick={() => setIsMenuOpen(false)}>
+              <Button className="w-full bg-gradient-to-r from-[#FF56BB] to-[#FF8F77] hover:from-[#FF56BB]/90 hover:to-[#FF8F77]/90 text-white" onClick={() => setIsMenuOpen(false)}>
                 Connect Wallet
               </Button>
             </div>
