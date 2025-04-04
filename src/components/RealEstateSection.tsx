@@ -203,8 +203,25 @@ const RealEstateSection = () => {
           </motion.div>
         </div>
 
-        {/* Chilean Lithium Mining Section with Updated Information */}
-        <div className="mt-24 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+        {/* Chilean Lithium Mining Section with Updated Information - Now with centered title */}
+        <motion.h2 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-3xl md:text-4xl font-bold text-center mt-24 mb-16"
+        >
+          <span className="bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
+            {t('realEstate.lithiumMiningTitle')}
+          </span>
+          <img 
+            src="/lovable-uploads/2be46ee9-76e5-46d6-9525-bf467f04849c.png" 
+            alt="Fire emoji" 
+            className="inline-block h-10 w-10 ml-3"
+          />
+        </motion.h2>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           <motion.div 
             className="space-y-6 text-left"
             initial={{ opacity: 0, y: 50 }}
@@ -212,10 +229,6 @@ const RealEstateSection = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
-              {t('realEstate.lithiumMiningTitle')}
-            </h3>
-            
             {/* Mining title card with highlight - Updated for better readability */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
