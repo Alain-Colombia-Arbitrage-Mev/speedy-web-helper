@@ -11,7 +11,8 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   const { i18n } = useTranslation();
-  const [language, setLanguageState] = useState(localStorage.getItem('i18nextLng') || 'en');
+  // Set default language to English 'en'
+  const [language, setLanguageState] = useState('en');
 
   const setLanguage = (lang: string) => {
     i18n.changeLanguage(lang);
@@ -20,11 +21,15 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   };
 
   useEffect(() => {
-    // Initialize with stored language preference
+    // Initialize with stored language preference or default to English
     const storedLang = localStorage.getItem('i18nextLng');
     if (storedLang) {
       i18n.changeLanguage(storedLang);
       setLanguageState(storedLang);
+    } else {
+      // If no language is stored, set English as default
+      i18n.changeLanguage('en');
+      localStorage.setItem('i18nextLng', 'en');
     }
   }, [i18n]);
 

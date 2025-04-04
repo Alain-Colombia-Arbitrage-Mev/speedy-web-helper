@@ -183,6 +183,7 @@ i18n
       es: { translation: esTranslations }
     },
     fallbackLng: 'en',
+    lng: 'en', // Set default language to English
     interpolation: {
       escapeValue: false, // React already escapes values
     },
