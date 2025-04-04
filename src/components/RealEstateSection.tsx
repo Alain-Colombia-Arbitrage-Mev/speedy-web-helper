@@ -68,7 +68,7 @@ const RealEstateSection = () => {
         <div className="mt-24 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           <div className="relative">
             <img 
-              src="/lovable-uploads/6dee9b01-b03c-4b9e-9f2d-78add40c32cf.png" 
+              src="https://i.imgur.com/Er4NeR7.gif" 
               alt="Property sharing grid" 
               className="w-full rounded-lg"
             />
