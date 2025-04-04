@@ -9,9 +9,9 @@ type ThemeContextType = {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export const ThemeProvider = ({ children }: { children: ReactNode }) => {
+  // Changed default to prioritize light mode instead of system preference
   const [isDarkMode, setIsDarkMode] = useState(
-    localStorage.getItem("darkMode") === "true" || 
-    window.matchMedia("(prefers-color-scheme: dark)").matches
+    localStorage.getItem("darkMode") === "true" ? true : false
   );
 
   useEffect(() => {
