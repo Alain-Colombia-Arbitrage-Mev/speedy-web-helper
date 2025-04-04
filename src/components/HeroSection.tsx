@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
 import { useTheme } from "@/contexts/ThemeContext";
@@ -119,9 +118,11 @@ const HeroSection = () => {
             transition={{ duration: 0.5, delay: 0.6 }}
           >
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Button size="lg" className="bg-gradient-to-r from-[#FF56BB] to-[#FF8F77] hover:from-[#FF56BB] hover:to-[#FF8F77]/80 text-white shadow-lg shadow-pink-500/30 border-0">
-                <span className="mr-2">🔥</span> {t('hero.presaleButton')}
-              </Button>
+              <a href="https://preventa-dracma.vercel.app/" target="_blank" rel="noopener noreferrer">
+                <Button size="lg" className="bg-gradient-to-r from-[#FF56BB] to-[#FF8F77] hover:from-[#FF56BB] hover:to-[#FF8F77]/80 text-white shadow-lg shadow-pink-500/30 border-0">
+                  <span className="mr-2">🔥</span> {t('hero.presaleButton')}
+                </Button>
+              </a>
             </motion.div>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Button size="lg" variant="outline" className={`border-2 border-[#FF56BB] text-[#FF56BB] hover:bg-pink-400/10 bg-transparent ${isDarkMode ? 'border-pink-400 text-pink-400' : ''}`}>
