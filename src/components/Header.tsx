@@ -45,7 +45,7 @@ const Header = () => {
               alt="Perperzon Logo" 
               className="h-10 mr-2" 
             />
-            <span className="text-xl font-bold">Perperzon</span>
+           
           </Link>
         </div>
 
