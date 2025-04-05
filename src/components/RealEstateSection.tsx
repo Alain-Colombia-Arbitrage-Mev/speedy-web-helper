@@ -249,7 +249,9 @@ const RealEstateSection = () => {
               transition={{ duration: 0.4, delay: 0.6 }}
               viewport={{ once: true }}
             >
-              <span className="font-semibold text-blue-300">{t('realEstate.atacamaMining')}</span> El Salar de Atacama es el yacimiento de litio más importante de Chile y uno de los más grandes del mundo, representando cerca del 35% de las reservas mundiales de litio.
+              <span className="font-semibold text-blue-300">{t('realEstate.atacamaMining')}</span>: {t('language') === 'es' ? 
+                'El Salar de Atacama es el yacimiento de litio más importante de Chile y uno de los más grandes del mundo, representando cerca del 35% de las reservas mundiales de litio.' : 
+                'The Salar de Atacama is the most important lithium deposit in Chile and one of the largest in the world, representing about 35% of the world\'s lithium reserves.'}
             </motion.p>
             <motion.p 
               className="text-xl leading-relaxed"
@@ -258,7 +260,9 @@ const RealEstateSection = () => {
               transition={{ duration: 0.4, delay: 0.7 }}
               viewport={{ once: true }}
             >
-              <span className="font-semibold text-blue-300">{t('realEstate.uyuniMining')}</span> Situado en Bolivia, es el salar más grande del mundo y contiene la mayor reserva de litio sin explotar. Junto con los salares de Chile y Argentina, forma parte del "Triángulo del Litio" que contiene más del 75% de las reservas mundiales.
+              <span className="font-semibold text-blue-300">{t('realEstate.uyuniMining')}</span>: {t('language') === 'es' ? 
+                'Situado en Bolivia, es el salar más grande del mundo y contiene la mayor reserva de litio sin explotar. Junto con los salares de Chile y Argentina, forma parte del "Triángulo del Litio" que contiene más del 75% de las reservas mundiales.' : 
+                'Located in Bolivia, it is the largest salt flat in the world and contains the largest untapped lithium reserve. Together with the salt flats of Chile and Argentina, it forms part of the "Lithium Triangle" that contains more than 75% of the world\'s reserves.'}
             </motion.p>
             <motion.div 
               className="pt-4"

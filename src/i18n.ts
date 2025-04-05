@@ -1,4 +1,3 @@
-
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
@@ -141,7 +140,7 @@ const esTranslations = {
     fractionalDesc2: 'Haciendo que la inversión inmobiliaria sea accesible para un público más amplio.',
     learnMoreButton: 'Saber Más',
     lithiumMiningTitle: 'Minería de Litio Chileno',
-    atacamaMining: 'Minería en Salar de Atacama', 
+    atacamaMining: 'Minería en Salar de Atacama',
     uyuniMining: 'Salar de Uyuni',
     miningTitle: 'Título Minero de 500 Hectáreas',
     miningPermits: 'Permisos activos de exploración y explotación de litio en operación',
