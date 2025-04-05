@@ -17,7 +17,6 @@ export function WalletProvider({ children }: WalletProviderProps) {
       <RainbowKitProvider 
         theme={isDarkMode ? darkTheme() : lightTheme()}
         modalSize="compact"
-        chains={config.chains}
         appInfo={{
           appName: 'Dracma App',
         }}
