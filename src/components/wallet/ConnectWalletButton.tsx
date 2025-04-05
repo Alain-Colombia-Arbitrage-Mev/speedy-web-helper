@@ -14,15 +14,10 @@ export default function ConnectWalletButton() {
         openAccountModal,
         openChainModal,
         openConnectModal,
-        authenticationStatus,
         mounted,
       }) => {
-        const ready = mounted && authenticationStatus !== 'loading';
-        const connected =
-          ready &&
-          account &&
-          chain &&
-          (!authenticationStatus || authenticationStatus === 'authenticated');
+        const ready = mounted;
+        const connected = ready && account && chain;
 
         return (
           <div

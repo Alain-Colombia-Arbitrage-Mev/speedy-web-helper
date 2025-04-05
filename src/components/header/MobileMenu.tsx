@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import Navigation from "./Navigation";
 import ThemeToggle from "./ThemeToggle";
 import LanguageSelector from "./LanguageSelector";
+import ConnectWalletButton from "../wallet/ConnectWalletButton";
 
 type MobileMenuProps = {
   isOpen: boolean;
@@ -57,9 +58,9 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
           <div className="flex justify-center">
             <LanguageSelector />
           </div>
-          <Button className="w-full bg-gradient-to-r from-[#FF56BB] to-[#FF8F77] hover:from-[#FF56BB]/90 hover:to-[#FF8F77]/90 text-white" onClick={onClose}>
-            {t('header.connectWallet')}
-          </Button>
+          <div className="w-full">
+            <ConnectWalletButton />
+          </div>
         </div>
       </div>
     </div>
