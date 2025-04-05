@@ -1,3 +1,4 @@
+
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
@@ -70,6 +71,7 @@ const enTranslations = {
     days: 'Days',
     hours: 'Hours',
     minutes: 'Minutes',
+    seconds: 'Seconds',
   },
   footer: {
     tagline: 'Democratizing real estate investments through blockchain technology',
@@ -165,6 +167,7 @@ const esTranslations = {
     days: 'Días',
     hours: 'Horas',
     minutes: 'Minutos',
+    seconds: 'Segundos',
   },
   footer: {
     tagline: 'Democratizando las inversiones inmobiliarias mediante la tecnología blockchain',

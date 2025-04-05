@@ -20,7 +20,7 @@ const LanguageSelector = () => {
         <div className={`flex items-center cursor-pointer ${isDarkMode ? 'border-gray-700 bg-gray-800' : 'border-gray-300 bg-white'} border rounded-md px-3 py-1`}>
           <Globe className="h-4 w-4 mr-1" />
           <span className={`font-medium ${isDarkMode ? 'text-gray-300' : 'text-[#FF56BB]'}`}>
-            {language === 'en' ? 'English' : 'Español'}
+            {language === 'en' ? t('header.english') : t('header.spanish')}
           </span>
           <ChevronDown className={`h-4 w-4 ml-1 ${isDarkMode ? 'text-gray-300' : 'text-[#FF56BB]'}`} />
         </div>
