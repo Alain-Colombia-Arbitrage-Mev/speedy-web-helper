@@ -4,7 +4,7 @@ import { getDefaultWallets } from '@rainbow-me/rainbowkit';
 import { http, createConfig } from 'wagmi';
 import { bsc } from 'wagmi/chains';
 
-const projectId = 'YOUR_WALLET_CONNECT_PROJECT_ID'; // Replace with your WalletConnect Project ID
+const projectId = '147f1ced0fc70fd33bc82189d73ebb43'; // WalletConnect Project ID
 
 const { wallets } = getDefaultWallets({
   appName: 'Dracma App',
@@ -16,7 +16,6 @@ const config = createConfig({
   transports: {
     [bsc.id]: http(),
   },
-  wallets: [...wallets],
 });
 
 export { config, wallets };
