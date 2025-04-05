@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import StatsBanner from "@/components/StatsBanner";
 import RealEstateSection from "@/components/RealEstateSection";
+import ChainLinkOracleSection from "@/components/ChainLinkOracleSection";
 import FireSection from "@/components/FireSection";
 import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
@@ -23,6 +24,9 @@ const Index = () => {
       
       {/* Real Estate Section */}
       <RealEstateSection />
+      
+      {/* ChainLink Oracle Section */}
+      <ChainLinkOracleSection />
       
       {/* Fire Section */}
       <FireSection />

@@ -381,4 +381,4 @@ const RealEstateSection = () => {
   );
 };
 
-export default RealEateSection;
+export default RealEstateSection;
