@@ -55,7 +55,7 @@ const enTranslations = {
     offPlanProjects: 'Off-plan Projects',
     tokenDescription: 'Each property is represented in an ERC-1400 Token, a security standard for realty',
     tokenValue: '1 Token = 10 m² built',
-    exploreOracleButton: 'Explore Oracle Data',
+    comingSoon: 'Coming Soon',
   },
   fire: {
     hotOffer: 'Hot offer',
@@ -150,7 +150,7 @@ const esTranslations = {
     offPlanProjects: 'Proyectos Fuera de Plano',
     tokenDescription: 'Cada propiedad está representada en un Token ERC-1400, un estándar de seguridad para bienes raíces',
     tokenValue: '1 Token = 10 m² construidos',
-    exploreOracleButton: 'Explorar Datos del Oráculo',
+    comingSoon: 'Próximamente',
   },
   fire: {
     hotOffer: 'Oferta Especial',
