@@ -23,7 +23,7 @@ const Navigation = ({ isMobile = false, onMobileItemClick = () => {} }: Navigati
         {t('header.presale')}
       </Link>
       <Link to="/projects" className={linkClass} onClick={onMobileItemClick}>
-        Proyects
+        {t('header.projects')}
       </Link>
       <Link to="/" className={linkClass} onClick={onMobileItemClick}>
         {t('header.tokenomics')}

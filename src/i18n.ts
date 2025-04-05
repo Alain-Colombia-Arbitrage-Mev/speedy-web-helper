@@ -17,6 +17,7 @@ const enTranslations = {
     connectWallet: 'Connect Wallet',
     darkMode: 'Dark Mode',
     lightMode: 'Light Mode',
+    projects: 'Projects',
   },
   hero: {
     subtitle: 'Web3 platform for democratized investments',
@@ -105,6 +106,7 @@ const esTranslations = {
     connectWallet: 'Conectar Billetera',
     darkMode: 'Modo Oscuro',
     lightMode: 'Modo Claro',
+    projects: 'Proyectos',
   },
   hero: {
     subtitle: 'Plataforma Web3 para inversiones democratizadas',
