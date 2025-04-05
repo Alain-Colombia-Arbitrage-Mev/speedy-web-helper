@@ -1,9 +1,9 @@
 
-import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
 import { useTheme } from "@/contexts/ThemeContext";
 import ThemeToggle from "./ThemeToggle";
 import LanguageSelector from "./LanguageSelector";
+import ConnectWalletButton from "../wallet/ConnectWalletButton";
 
 const HeaderControls = () => {
   const { t } = useTranslation();
@@ -20,9 +20,8 @@ const HeaderControls = () => {
         {/* Dark Mode Toggle */}
         <ThemeToggle />
         
-        <Button className="bg-gradient-to-r from-[#FF56BB] to-[#FF8F77] hover:from-[#FF56BB]/90 hover:to-[#FF8F77]/90 text-white">
-          {t('header.connectWallet')}
-        </Button>
+        {/* Connect Wallet Button */}
+        <ConnectWalletButton />
       </div>
     </div>
   );

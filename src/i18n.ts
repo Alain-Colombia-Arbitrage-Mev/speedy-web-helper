@@ -19,6 +19,15 @@ const enTranslations = {
     lightMode: 'Light Mode',
     projects: 'Projects',
   },
+  wallet: {
+    wrongNetwork: 'Wrong Network',
+    switchNetwork: 'Switch Network',
+    disconnect: 'Disconnect',
+    copy: 'Copy Address',
+    copied: 'Copied!',
+    connecting: 'Connecting...',
+    connected: 'Connected',
+  },
   hero: {
     subtitle: 'Web3 platform for democratized investments',
     title: 'Unlock the unique digital property of your investments',
@@ -114,6 +123,15 @@ const esTranslations = {
     darkMode: 'Modo Oscuro',
     lightMode: 'Modo Claro',
     projects: 'Proyectos',
+  },
+  wallet: {
+    wrongNetwork: 'Red Incorrecta',
+    switchNetwork: 'Cambiar Red',
+    disconnect: 'Desconectar',
+    copy: 'Copiar Dirección',
+    copied: '¡Copiado!',
+    connecting: 'Conectando...',
+    connected: 'Conectado',
   },
   hero: {
     subtitle: 'Plataforma Web3 para inversiones democratizadas',
