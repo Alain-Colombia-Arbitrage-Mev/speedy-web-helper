@@ -12,10 +12,12 @@ const Navigation = ({ isMobile = false, onMobileItemClick = () => {} }: Navigati
   const { isDarkMode } = useTheme();
   const { t } = useTranslation();
 
-  const linkClass = `${isDarkMode ? 'text-gray-300 hover:text-[#FF56BB]' : 'text-gray-700 hover:text-[#FF56BB]'} ${isMobile ? 'text-xl' : 'font-semibold'}`;
+  const linkClass = `${isDarkMode ? 'text-gray-300 hover:text-[#FF56BB]' : 'text-gray-700 hover:text-[#FF56BB]'} ${
+    isMobile ? 'text-xl py-3 block w-full text-center' : 'font-semibold'
+  }`;
 
   return (
-    <>
+    <div className={isMobile ? "flex flex-col w-full space-y-4" : "flex items-center space-x-8"}>
       <Link to="/" className={linkClass} onClick={onMobileItemClick}>
         {t('header.howItWorks')}
       </Link>
@@ -33,7 +35,7 @@ const Navigation = ({ isMobile = false, onMobileItemClick = () => {} }: Navigati
           {t('header.invest')}
         </Link>
       )}
-    </>
+    </div>
   );
 };
 

@@ -36,7 +36,7 @@ const Header = () => {
 
   return (
     <header 
-      className={`w-full py-6 px-6 md:px-8 lg:px-12 fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`w-full py-6 px-6 md:px-8 lg:px-12 fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
         isScrolled 
           ? isDarkMode 
             ? "bg-gray-900 shadow-md" 
@@ -76,6 +76,7 @@ const Header = () => {
             <button
               onClick={toggleMenu}
               className={`p-2 ${isDarkMode ? 'text-gray-300 hover:bg-gray-800' : 'text-gray-700 hover:bg-gray-100'} rounded-md`}
+              aria-label="Toggle menu"
             >
               <Menu size={24} />
             </button>
@@ -84,7 +85,7 @@ const Header = () => {
       </div>
 
       {/* Mobile Menu */}
-      <MobileMenu isOpen={isMobile && isMenuOpen} onClose={toggleMenu} />
+      <MobileMenu isOpen={isMenuOpen} onClose={toggleMenu} />
     </header>
   );
 };
