@@ -13,11 +13,11 @@ const Navigation = ({ isMobile = false, onMobileItemClick = () => {} }: Navigati
   const { t } = useTranslation();
 
   const linkClass = `${isDarkMode ? 'text-gray-300 hover:text-[#FF56BB]' : 'text-gray-700 hover:text-[#FF56BB]'} ${
-    isMobile ? 'text-xl py-3 block w-full text-center' : 'font-semibold'
-  }`;
+    isMobile ? 'text-base py-2 block w-full text-center' : 'font-semibold'
+  } transition-colors duration-200`;
 
   return (
-    <div className={isMobile ? "flex flex-col w-full space-y-4" : "flex items-center space-x-8"}>
+    <div className={isMobile ? "flex flex-col w-full space-y-2" : "flex items-center space-x-6"}>
       <Link to="/" className={linkClass} onClick={onMobileItemClick}>
         {t('header.howItWorks')}
       </Link>

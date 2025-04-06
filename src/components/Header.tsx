@@ -36,7 +36,7 @@ const Header = () => {
 
   return (
     <header 
-      className={`w-full py-6 px-6 md:px-8 lg:px-12 fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
+      className={`w-full py-4 px-4 md:px-6 lg:px-8 fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
         isScrolled 
           ? isDarkMode 
             ? "bg-gray-900 shadow-md" 
@@ -55,7 +55,7 @@ const Header = () => {
                 ? "/lovable-uploads/203367a9-10e9-4c1b-8a90-bac684e7c854.png" 
                 : "/lovable-uploads/bc49257a-a778-4541-b61f-827711c6164a.png"} 
               alt="Perperzon Logo" 
-              className="h-12 mr-2" 
+              className="h-8 md:h-10 lg:h-12 mr-2" 
             />
           </Link>
         </div>
@@ -78,7 +78,7 @@ const Header = () => {
               className={`p-2 ${isDarkMode ? 'text-gray-300 hover:bg-gray-800' : 'text-gray-700 hover:bg-gray-100'} rounded-md`}
               aria-label="Toggle menu"
             >
-              <Menu size={24} />
+              <Menu size={20} />
             </button>
           )}
         </div>

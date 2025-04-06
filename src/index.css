@@ -49,6 +49,8 @@
 
   body {
     font-family: 'Clash Display', sans-serif;
+    width: 100%;
+    overflow-x: hidden;
   }
 
   .dark {
@@ -104,10 +106,13 @@
     text-rendering: optimizeSpeed;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    width: 100%;
+    overflow-x: hidden;
   }
   /* Performance optimizations */
   img, svg, video, canvas, audio, iframe, embed, object {
     display: block;
+    max-width: 100%;
   }
   img, video {
     max-width: 100%;
@@ -117,6 +122,12 @@
   @media (max-width: 768px) {
     html {
       font-size: 14px;
+    }
+    
+    .container {
+      width: 100%;
+      padding-left: 1rem;
+      padding-right: 1rem;
     }
   }
 }
@@ -136,5 +147,28 @@
       opacity: 1;
       transform: translateY(0);
     }
+  }
+  
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+#root {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  #root {
+    padding: 0;
   }
 }
