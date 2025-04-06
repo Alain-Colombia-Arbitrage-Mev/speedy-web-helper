@@ -86,15 +86,18 @@ const InvestmentCalculator = () => {
   const { t } = useTranslation();
   const [investmentAmount, setInvestmentAmount] = useState(1000);
   const [potentialGain, setPotentialGain] = useState(0);
+  const [tokensReceived, setTokensReceived] = useState(0);
   const [selectedCurrency, setSelectedCurrency] = useState("usdt");
   
   const presalePrice = 0.25; // Presale price in USD
   const launchPrice = 0.50; // Launch price in USD
   
   useEffect(() => {
-    const tokensReceived = investmentAmount / presalePrice;
-    const valueAtLaunch = tokensReceived * launchPrice;
+    const tokens = investmentAmount / presalePrice;
+    const valueAtLaunch = tokens * launchPrice;
     const profit = valueAtLaunch - investmentAmount;
+    
+    setTokensReceived(tokens);
     setPotentialGain(profit);
   }, [investmentAmount]);
   
@@ -112,6 +115,10 @@ const InvestmentCalculator = () => {
             className="pl-8 bg-[#1c1d21] border-gray-700 text-white"
           />
         </div>
+      </div>
+      
+      <div className="pt-2 text-white">
+        {t('fire.tokensReceived')}: <span className="font-semibold text-blue-400">{tokensReceived.toLocaleString(undefined, { maximumFractionDigits: 0 })}</span> DRACMA
       </div>
       
       <div className="pt-2 text-green-500 font-semibold">
