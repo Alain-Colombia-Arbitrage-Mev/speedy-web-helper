@@ -83,6 +83,7 @@ const enTranslations = {
     investmentAmount: 'Investment Amount',
     potentialProfit: 'Potential Profit',
     selectCurrency: 'Select Currency',
+    tokensReceived: 'Tokens Dracma a recibir',
   },
   footer: {
     tagline: 'Democratizing real estate investments through blockchain technology',
@@ -191,6 +192,7 @@ const esTranslations = {
     investmentAmount: 'Monto a Invertir',
     potentialProfit: 'Ganancia Potencial',
     selectCurrency: 'Seleccionar Moneda',
+    tokensReceived: 'Tokens Dracma a recibir',
   },
   footer: {
     tagline: 'Democratizando las inversiones inmobiliarias mediante la tecnología blockchain',
