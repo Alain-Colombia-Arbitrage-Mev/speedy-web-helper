@@ -82,6 +82,7 @@ const enTranslations = {
     seconds: 'Seconds',
     investmentAmount: 'Investment Amount',
     potentialProfit: 'Potential Profit',
+    selectCurrency: 'Select Currency',
   },
   footer: {
     tagline: 'Democratizing real estate investments through blockchain technology',
@@ -189,6 +190,7 @@ const esTranslations = {
     seconds: 'Segundos',
     investmentAmount: 'Monto a Invertir',
     potentialProfit: 'Ganancia Potencial',
+    selectCurrency: 'Seleccionar Moneda',
   },
   footer: {
     tagline: 'Democratizando las inversiones inmobiliarias mediante la tecnología blockchain',

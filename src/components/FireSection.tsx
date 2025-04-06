@@ -1,9 +1,17 @@
+
 import { useTranslation } from 'react-i18next';
 import { Button } from "@/components/ui/button";
-import { Flame } from "lucide-react";
+import { Flame, Check, ChevronDown, Bitcoin, DollarSign } from "lucide-react";
 import { useEffect, useState } from 'react';
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 const CountdownTimer = () => {
   const { t } = useTranslation();
@@ -78,6 +86,7 @@ const InvestmentCalculator = () => {
   const { t } = useTranslation();
   const [investmentAmount, setInvestmentAmount] = useState(1000);
   const [potentialGain, setPotentialGain] = useState(0);
+  const [selectedCurrency, setSelectedCurrency] = useState("usdt");
   
   const presalePrice = 0.25; // Presale price in USD
   const launchPrice = 0.50; // Launch price in USD
@@ -107,6 +116,29 @@ const InvestmentCalculator = () => {
       
       <div className="pt-2 text-green-500 font-semibold">
         {t('fire.potentialProfit')}: ${potentialGain.toFixed(2)}
+      </div>
+      
+      <div className="pt-2">
+        <Label htmlFor="currency-select" className="text-gray-400 block mb-2">{t('fire.selectCurrency')}</Label>
+        <Select value={selectedCurrency} onValueChange={setSelectedCurrency}>
+          <SelectTrigger id="currency-select" className="bg-[#1c1d21] border-gray-700 text-white">
+            <SelectValue placeholder={t('fire.selectCurrency')} />
+          </SelectTrigger>
+          <SelectContent className="bg-[#1c1d21] border-gray-700 text-white">
+            <SelectItem value="usdt" className="focus:bg-gray-700 focus:text-white">
+              <div className="flex items-center">
+                <DollarSign className="h-5 w-5 mr-2 text-teal-500" />
+                <span>USDT</span>
+              </div>
+            </SelectItem>
+            <SelectItem value="wbnb" className="focus:bg-gray-700 focus:text-white">
+              <div className="flex items-center">
+                <Bitcoin className="h-5 w-5 mr-2 text-yellow-500" />
+                <span>WBNB</span>
+              </div>
+            </SelectItem>
+          </SelectContent>
+        </Select>
       </div>
     </div>
   );
