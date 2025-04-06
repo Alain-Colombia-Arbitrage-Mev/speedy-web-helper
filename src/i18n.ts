@@ -80,6 +80,8 @@ const enTranslations = {
     hours: 'Hours',
     minutes: 'Minutes',
     seconds: 'Seconds',
+    investmentAmount: 'Investment Amount',
+    potentialProfit: 'Potential Profit',
   },
   footer: {
     tagline: 'Democratizing real estate investments through blockchain technology',
@@ -185,6 +187,8 @@ const esTranslations = {
     hours: 'Horas',
     minutes: 'Minutos',
     seconds: 'Segundos',
+    investmentAmount: 'Monto a Invertir',
+    potentialProfit: 'Ganancia Potencial',
   },
   footer: {
     tagline: 'Democratizando las inversiones inmobiliarias mediante la tecnología blockchain',
