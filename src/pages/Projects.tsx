@@ -39,6 +39,15 @@ const Projects = () => {
       roi: "+18%",
       investmentRequired: "$320,000",
       status: "Planned"
+    },
+    {
+      id: 4,
+      title: "Agro",
+      description: "Agricultural investment in sustainable farming operations.",
+      image: "/lovable-uploads/a88a5d72-cb06-49e1-98f2-481a147fac12.png",
+      roi: "+20%",
+      investmentRequired: "$150,000",
+      status: "Active"
     }
   ];
 
