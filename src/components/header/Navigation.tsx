@@ -21,9 +21,15 @@ const Navigation = ({ isMobile = false, onMobileItemClick = () => {} }: Navigati
       <Link to="/" className={linkClass} onClick={onMobileItemClick}>
         {t('header.howItWorks')}
       </Link>
-      <Link to="/" className={linkClass} onClick={onMobileItemClick}>
+      <a 
+        href="https://preventa-dracma.vercel.app/" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className={linkClass} 
+        onClick={onMobileItemClick}
+      >
         {t('header.presale')}
-      </Link>
+      </a>
       <Link to="/projects" className={linkClass} onClick={onMobileItemClick}>
         {t('header.projects')}
       </Link>
