@@ -1,7 +1,6 @@
-
 import { useTranslation } from 'react-i18next';
 import { Button } from "@/components/ui/button";
-import { Flame, Check, ChevronDown, Bitcoin, DollarSign } from "lucide-react";
+import { Flame, Check, ChevronDown, Bitcoin, DollarSign, Wallet } from "lucide-react";
 import { useEffect, useState } from 'react';
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -210,6 +209,10 @@ const FireSection = () => {
                 <span className="text-gray-400">{t('fire.roiPotential')}</span>
                 <span className="text-2xl font-bold text-green-500">+100%</span>
               </div>
+              
+              <Button size="lg" className="w-full mt-4 bg-gradient-to-r from-[#FF56BB] to-[#FF8F77] hover:from-[#FF56BB]/90 hover:to-[#FF8F77]/90 text-white font-bold py-3 rounded-lg shadow-lg shadow-[#FF56BB]/20">
+                <Wallet className="w-5 h-5 mr-2" /> Invest Now
+              </Button>
             </div>
           </div>
         </div>
