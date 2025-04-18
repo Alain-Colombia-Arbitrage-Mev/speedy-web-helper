@@ -42,7 +42,7 @@ const Projects = () => {
     },
     {
       id: 4,
-      title: "Agro",
+      title: "Chilean Litio Mining",
       description: "Agricultural investment in sustainable farming operations.",
       image: "/lovable-uploads/a88a5d72-cb06-49e1-98f2-481a147fac12.png",
       roi: "+20%",
@@ -130,3 +130,4 @@ const Projects = () => {
 };
 
 export default Projects;
+
