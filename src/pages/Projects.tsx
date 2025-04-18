@@ -1,4 +1,4 @@
-
+import React from 'react';
 import { useTranslation } from "react-i18next";
 import { useTheme } from "@/contexts/ThemeContext";
 import { motion } from "framer-motion";
@@ -11,7 +11,6 @@ const Projects = () => {
   const { t } = useTranslation();
   const { isDarkMode } = useTheme();
 
-  // Sample project data
   const projects = [
     {
       id: 1,
@@ -43,7 +42,7 @@ const Projects = () => {
     {
       id: 4,
       title: "Chilean Litio Mining",
-      description: "Agricultural investment in sustainable farming operations.",
+      description: "Strategic lithium mining investment in Chile's premier mineral regions.",
       image: "/lovable-uploads/a88a5d72-cb06-49e1-98f2-481a147fac12.png",
       roi: "+20%",
       investmentRequired: "$150,000",
@@ -130,4 +129,3 @@ const Projects = () => {
 };
 
 export default Projects;
-
