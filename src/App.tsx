@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -11,6 +10,7 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import { LanguageProvider } from "./contexts/LanguageContext";
 import { WalletProvider } from "./components/providers/WalletProvider";
 import './i18n'; // Import i18n configuration
+import ProjectAlpha from "./pages/ProjectAlpha";
 
 const queryClient = new QueryClient();
 
@@ -26,7 +26,7 @@ const App = () => (
               <Routes>
                 <Route path="/" element={<Index />} />
                 <Route path="/projects" element={<Projects />} />
-                {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+                <Route path="/projects/alpha" element={<ProjectAlpha />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </BrowserRouter>

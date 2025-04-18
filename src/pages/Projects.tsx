@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import { Button, Link } from "@/components/ui/button";
 
 const Projects = () => {
   const { t } = useTranslation();
@@ -19,7 +19,8 @@ const Projects = () => {
       image: "/lovable-uploads/2ca1133b-6cd8-42a2-ad78-e526b7d73a87.png",
       roi: "+15%",
       investmentRequired: "$250,000",
-      status: "Active"
+      status: "Active",
+      link: "/projects/alpha"
     },
     {
       id: 2,
@@ -28,7 +29,8 @@ const Projects = () => {
       image: "/lovable-uploads/6dee9b01-b03c-4b9e-9f2d-78add40c32cf.png",
       roi: "+12%",
       investmentRequired: "$180,000",
-      status: "Funding"
+      status: "Funding",
+      link: "/projects/beta"
     },
     {
       id: 3,
@@ -37,7 +39,8 @@ const Projects = () => {
       image: "/lovable-uploads/943baadb-065a-4c5e-b6fd-c597deb3c23f.png",
       roi: "+18%",
       investmentRequired: "$320,000",
-      status: "Planned"
+      status: "Planned",
+      link: "/projects/gamma"
     },
     {
       id: 4,
@@ -46,7 +49,8 @@ const Projects = () => {
       image: "/lovable-uploads/a88a5d72-cb06-49e1-98f2-481a147fac12.png",
       roi: "+20%",
       investmentRequired: "$150,000",
-      status: "Active"
+      status: "Active",
+      link: "/projects/litio"
     }
   ];
 
@@ -113,9 +117,11 @@ const Projects = () => {
                     </div>
                   </CardContent>
                   <CardFooter>
-                    <Button className="w-full bg-gradient-to-r from-[#FF56BB] to-[#FF8F77] hover:from-[#FF56BB]/90 hover:to-[#FF8F77]/90">
-                      View Details
-                    </Button>
+                    <Link to={project.link}>
+                      <Button className="w-full bg-gradient-to-r from-[#FF56BB] to-[#FF8F77] hover:from-[#FF56BB]/90 hover:to-[#FF8F77]/90">
+                        View Details
+                      </Button>
+                    </Link>
                   </CardFooter>
                 </Card>
               </motion.div>
