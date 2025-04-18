@@ -10,7 +10,7 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { DollarSign, CreditCard, Wallet } from "lucide-react";
+import { DollarSign, CreditCard, Wallet, FileText, Link as LinkIcon } from "lucide-react";
 
 const ProjectAlpha = () => {
   const { isDarkMode } = useTheme();
@@ -49,6 +49,39 @@ const ProjectAlpha = () => {
               Residential property development in Santiago, Chile.
             </p>
           </motion.div>
+
+          {/* Project Image and Description Card */}
+          <Card className={`mb-8 ${isDarkMode ? 'bg-gray-800 border-gray-700' : ''}`}>
+            <div className="aspect-video overflow-hidden rounded-t-lg">
+              <img 
+                src="/lovable-uploads/2ca1133b-6cd8-42a2-ad78-e526b7d73a87.png"
+                alt="Project Alpha Property"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <CardContent className="pt-6">
+              <h2 className="text-2xl font-semibold mb-4">About the Project</h2>
+              <p className={`mb-6 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                Project Alpha is a premium residential development located in the heart of Santiago, Chile. 
+                This project comprises luxury apartments with modern amenities, targeting young professionals 
+                and families looking for high-quality living spaces in a prime location.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button variant="outline" className="flex items-center gap-2">
+                  <FileText className="h-4 w-4" />
+                  <a href="/business-plan.pdf" target="_blank" rel="noopener noreferrer">
+                    Business Plan
+                  </a>
+                </Button>
+                <Button variant="outline" className="flex items-center gap-2">
+                  <LinkIcon className="h-4 w-4" />
+                  <a href="/disbursement-info.pdf" target="_blank" rel="noopener noreferrer">
+                    Disbursement Information
+                  </a>
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
 
           <Card className={`mb-8 ${isDarkMode ? 'bg-gray-800 border-gray-700' : ''}`}>
             <CardHeader>
