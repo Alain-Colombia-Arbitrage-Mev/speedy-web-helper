@@ -1,11 +1,13 @@
+
 import React from 'react';
 import { useTranslation } from "react-i18next";
 import { useTheme } from "@/contexts/ThemeContext";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button, Link } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 
 const Projects = () => {
   const { t } = useTranslation();
@@ -117,7 +119,7 @@ const Projects = () => {
                     </div>
                   </CardContent>
                   <CardFooter>
-                    <Link to={project.link}>
+                    <Link to={project.link} className="w-full">
                       <Button className="w-full bg-gradient-to-r from-[#FF56BB] to-[#FF8F77] hover:from-[#FF56BB]/90 hover:to-[#FF8F77]/90">
                         View Details
                       </Button>
