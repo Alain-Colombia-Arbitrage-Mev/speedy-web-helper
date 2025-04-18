@@ -114,10 +114,10 @@ const ProjectAlpha = () => {
                       </Label>
                     </div>
                     <div className={`flex items-center space-x-2 rounded-lg border p-4 ${isDarkMode ? 'border-gray-700' : 'border-gray-200'}`}>
-                      <RadioGroupItem value="card" id="card" />
-                      <Label htmlFor="card" className="flex items-center gap-2">
+                      <RadioGroupItem value="fiat" id="fiat" />
+                      <Label htmlFor="fiat" className="flex items-center gap-2">
                         <CreditCard className="h-5 w-5" />
-                        Debit Card
+                        Fiat on Ramp
                       </Label>
                     </div>
                   </RadioGroup>
