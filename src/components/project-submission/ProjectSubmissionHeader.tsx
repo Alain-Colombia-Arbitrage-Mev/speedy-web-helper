@@ -13,7 +13,7 @@ const ProjectSubmissionHeader = () => {
       transition={{ duration: 0.5 }}
     >
       <h1 className="text-4xl md:text-5xl font-bold mb-4">
-        Enviar <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF56BB] to-[#FF8F77]">Proyecto</span>
+        Crear <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF56BB] to-[#FF8F77]">Proyecto</span>
       </h1>
       <p className={`text-lg max-w-2xl mx-auto ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
         Propón tu proyecto de inversión inmobiliaria para la plataforma Dracma
