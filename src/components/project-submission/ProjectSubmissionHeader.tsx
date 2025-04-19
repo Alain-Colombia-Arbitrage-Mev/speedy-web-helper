@@ -16,7 +16,7 @@ const ProjectSubmissionHeader = () => {
         Crear <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF56BB] to-[#FF8F77]">Proyecto</span>
       </h1>
       <p className={`text-lg max-w-2xl mx-auto ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-        Propón tu proyecto de inversión inmobiliaria para la plataforma Dracma
+        Dracma es un fondo de inversión colaborativa, si tu proyecto cuenta con buenas metricas, puede ser incluido en nuestra lista de proyectos para realizar marketing con nuestra comunidad "despierta, nuestro marketing es un marketing de vox populi
       </p>
     </motion.div>
   );
