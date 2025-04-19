@@ -55,7 +55,6 @@ export const useDracmaBalance = () => {
     abi: erc20ABI,
     functionName: 'balanceOf',
     args: address ? [address] : undefined,
-    enabled: !!address && isConnected,
   });
 
   // Consultar los decimales
@@ -63,13 +62,12 @@ export const useDracmaBalance = () => {
     address: dracmaAddress,
     abi: erc20ABI,
     functionName: 'decimals',
-    enabled: !!address && isConnected,
   });
 
   useEffect(() => {
     if (!isPending && balanceData && decimalsData !== undefined) {
       const decimals = Number(decimalsData);
-      const formattedBalance = formatUnits(balanceData, decimals);
+      const formattedBalance = formatUnits(balanceData as bigint, decimals);
       setBalance(formattedBalance);
       
       // Verificar si el usuario tiene suficientes tokens
@@ -84,3 +82,4 @@ export const useDracmaBalance = () => {
 
   return { isHolder, balance, isLoading };
 };
+
