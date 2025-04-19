@@ -1,3 +1,4 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -11,6 +12,7 @@ import { LanguageProvider } from "./contexts/LanguageContext";
 import { WalletProvider } from "./components/providers/WalletProvider";
 import './i18n'; // Import i18n configuration
 import ProjectAlpha from "./pages/ProjectAlpha";
+import ProjectSubmission from "./pages/ProjectSubmission";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +29,7 @@ const App = () => (
                 <Route path="/" element={<Index />} />
                 <Route path="/projects" element={<Projects />} />
                 <Route path="/projects/alpha" element={<ProjectAlpha />} />
+                <Route path="/submit-project" element={<ProjectSubmission />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </BrowserRouter>
