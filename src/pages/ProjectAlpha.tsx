@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useTheme } from "@/contexts/ThemeContext";
 import { motion } from "framer-motion";
@@ -20,7 +19,7 @@ const ProjectAlpha = () => {
   const [paymentMethod, setPaymentMethod] = useState<string>("usdt");
   
   // Dirección de wallet específica para este proyecto
-  const projectWalletAddress = "0x4A8f1f5B6AEC987D42C11E9C10594F7eCBe27132";
+  const projectWalletAddress = "0x4A8f1f5B6AEC987D42C11E9C10594F7eCBe27234";
   
   // Project details
   const projectDetails = {
