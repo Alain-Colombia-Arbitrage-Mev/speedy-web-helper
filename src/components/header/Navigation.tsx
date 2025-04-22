@@ -36,7 +36,7 @@ const Navigation = ({ isMobile = false, onMobileItemClick = () => {} }: Navigati
       <Link to="/submit-project" className={linkClass} onClick={onMobileItemClick}>
         Enviar Proyecto
       </Link>
-      <Link to="/" className={linkClass} onClick={onMobileItemClick}>
+      <Link to="/tokenomics" className={linkClass} onClick={onMobileItemClick}>
         {t('header.tokenomics')}
       </Link>
       {isMobile && (
