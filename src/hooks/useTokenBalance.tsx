@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { useAccount, useReadContract } from 'wagmi';
 import { formatUnits } from 'viem';
@@ -47,7 +46,7 @@ export const useDracmaBalance = () => {
   
   // Contrato DRACMA en BSC
   const dracmaAddress = "0x8A9f07fdBc75144C9207373597136c6E280A872D";
-  const requiredAmount = 100000; // 100,000 tokens
+  const requiredAmount = 10000; // Changed to 10,000 tokens
 
   // Consultar el balance
   const { data: balanceData, error, isPending } = useReadContract({
@@ -82,4 +81,3 @@ export const useDracmaBalance = () => {
 
   return { isHolder, balance, isLoading };
 };
-
