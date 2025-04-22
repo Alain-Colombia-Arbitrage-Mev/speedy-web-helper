@@ -16,8 +16,7 @@ import ProjectSubmissionHeader from "@/components/project-submission/ProjectSubm
 import ProjectFormBasicInfo, { projectSchema } from "@/components/project-submission/ProjectFormBasicInfo";
 import ProjectFormFinancials from "@/components/project-submission/ProjectFormFinancials";
 import FileUploadField from "@/components/project-submission/FileUploadField";
-import InsufficientBalanceDialog from "@/components/project-submission/InsufficientBalanceDialog";
-import InsufficientBalanceMessage from "@/components/project-submission/InsufficientBalanceMessage";
+import InsufficientBalanceMessage from "@/components/project-submission/InsufficientBalanceDialog";
 import * as z from "zod";
 
 const ProjectSubmission = () => {
