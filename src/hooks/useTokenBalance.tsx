@@ -49,12 +49,13 @@ export const useDracmaBalance = () => {
   const dracmaAddress = "0x8A9f07fdBc75144C9207373597136c6E280A872D";
   const requiredAmount = 10000; // Set to 10,000 tokens as requested
 
-  // Consultar el balance
+  // Consultar el balance solo si hay una dirección disponible
   const { data: balanceData, error, isPending } = useReadContract({
     address: dracmaAddress,
     abi: erc20ABI,
     functionName: 'balanceOf',
     args: address ? [address] : undefined,
+    enabled: !!address, // Solo habilita la consulta cuando hay una dirección
   });
 
   // Consultar los decimales
@@ -62,23 +63,36 @@ export const useDracmaBalance = () => {
     address: dracmaAddress,
     abi: erc20ABI,
     functionName: 'decimals',
+    enabled: !!address, // Solo habilita la consulta cuando hay una dirección
   });
 
   useEffect(() => {
-    if (!isPending && balanceData && decimalsData !== undefined) {
-      const decimals = Number(decimalsData);
-      const formattedBalance = formatUnits(balanceData as bigint, decimals);
-      setBalance(formattedBalance);
-      
-      // Verificar si el usuario tiene suficientes tokens
-      const hasEnoughTokens = Number(formattedBalance) >= requiredAmount;
-      setIsHolder(hasEnoughTokens);
+    if (!isConnected) {
       setIsLoading(false);
+      setBalance("0");
+      setIsHolder(false);
+      return;
+    }
+
+    if (!isPending && balanceData && decimalsData !== undefined) {
+      try {
+        const decimals = Number(decimalsData);
+        const formattedBalance = formatUnits(balanceData as bigint, decimals);
+        setBalance(formattedBalance);
+        
+        // Verificar si el usuario tiene suficientes tokens
+        const hasEnoughTokens = Number(formattedBalance) >= requiredAmount;
+        setIsHolder(hasEnoughTokens);
+        setIsLoading(false);
+      } catch (err) {
+        console.error("Error processing balance data:", err);
+        setIsLoading(false);
+      }
     } else if (error) {
       console.error("Error fetching balance:", error);
       setIsLoading(false);
     }
-  }, [balanceData, decimalsData, isPending, error]);
+  }, [balanceData, decimalsData, isPending, error, isConnected, address]);
 
   return { isHolder, balance, isLoading };
 };
