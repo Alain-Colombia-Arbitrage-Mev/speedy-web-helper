@@ -10,12 +10,17 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { DollarSign, CreditCard, Wallet, FileText, Link as LinkIcon } from "lucide-react";
+import { DollarSign, CreditCard, Wallet, FileText, Link as LinkIcon, Copy } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 
 const ProjectAlpha = () => {
   const { isDarkMode } = useTheme();
+  const { toast } = useToast();
   const [investmentAmount, setInvestmentAmount] = useState<string>("");
   const [paymentMethod, setPaymentMethod] = useState<string>("usdt");
+  
+  // Dirección de wallet específica para este proyecto
+  const projectWalletAddress = "0x4A8f1f5B6AEC987D42C11E9C10594F7eCBe27132";
   
   // Project details
   const projectDetails = {
@@ -29,6 +34,18 @@ const ProjectAlpha = () => {
     if (!isNaN(Number(value))) {
       setInvestmentAmount(value);
     }
+  };
+  
+  const handleCopyAddress = () => {
+    navigator.clipboard.writeText(projectWalletAddress);
+    toast({
+      title: "Dirección copiada",
+      description: "La dirección del proyecto ha sido copiada al portapapeles",
+    });
+  };
+  
+  const getFiatOnRampUrl = () => {
+    return `https://onramp.gatefi.com/?merchantId=3e1a127a-0da9-45aa-8cb8-06cf343b8ca0&cryptoCurrency=USDT-BEP20&cryptoCurrencyLock=true&wallet=${projectWalletAddress}`;
   };
 
   return (
@@ -66,6 +83,24 @@ const ProjectAlpha = () => {
                 This project comprises luxury apartments with modern amenities, targeting young professionals 
                 and families looking for high-quality living spaces in a prime location.
               </p>
+              
+              <div className="mb-6 p-4 border rounded-lg">
+                <h3 className="text-lg font-medium mb-2">Project Smart Contract</h3>
+                <div className="flex items-center justify-between gap-2 p-2 bg-gray-100 dark:bg-gray-800 rounded">
+                  <code className="text-sm overflow-x-auto whitespace-nowrap flex-1">
+                    {projectWalletAddress}
+                  </code>
+                  <Button 
+                    variant="outline" 
+                    size="sm" 
+                    onClick={handleCopyAddress}
+                    className="flex-shrink-0"
+                  >
+                    <Copy className="h-4 w-4" />
+                  </Button>
+                </div>
+              </div>
+              
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button variant="outline" className="flex items-center gap-2">
                   <FileText className="h-4 w-4" />
@@ -156,11 +191,20 @@ const ProjectAlpha = () => {
                   </RadioGroup>
                 </div>
 
-                <Button 
-                  className="w-full bg-gradient-to-r from-[#FF56BB] to-[#FF8F77] hover:from-[#FF56BB]/90 hover:to-[#FF8F77]/90"
-                >
-                  Invest Now
-                </Button>
+                {paymentMethod === "fiat" ? (
+                  <Button 
+                    className="w-full bg-gradient-to-r from-[#FF56BB] to-[#FF8F77] hover:from-[#FF56BB]/90 hover:to-[#FF8F77]/90"
+                    onClick={() => window.open(getFiatOnRampUrl(), "_blank")}
+                  >
+                    Proceed to Payment Gateway
+                  </Button>
+                ) : (
+                  <Button 
+                    className="w-full bg-gradient-to-r from-[#FF56BB] to-[#FF8F77] hover:from-[#FF56BB]/90 hover:to-[#FF8F77]/90"
+                  >
+                    Invest Now
+                  </Button>
+                )}
               </div>
             </CardContent>
           </Card>
