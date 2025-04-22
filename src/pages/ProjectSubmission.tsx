@@ -17,6 +17,7 @@ import ProjectFormBasicInfo, { projectSchema } from "@/components/project-submis
 import ProjectFormFinancials from "@/components/project-submission/ProjectFormFinancials";
 import FileUploadField from "@/components/project-submission/FileUploadField";
 import InsufficientBalanceDialog from "@/components/project-submission/InsufficientBalanceDialog";
+import InsufficientBalanceMessage from "@/components/project-submission/InsufficientBalanceMessage";
 import * as z from "zod";
 
 const ProjectSubmission = () => {
@@ -97,30 +98,16 @@ const ProjectSubmission = () => {
 
     if (!isHolder) {
       return (
-        <>
-          <InsufficientBalanceDialog
-            isOpen={showInsufficientBalanceDialog}
-            onOpenChange={setShowInsufficientBalanceDialog}
-            currentBalance={balance}
-          />
+        <div className="space-y-6">
+          <InsufficientBalanceMessage currentBalance={balance} />
           <Card className={`${isDarkMode ? 'bg-gray-800 border-gray-700' : ''}`}>
-            <CardContent className="pt-6 flex flex-col items-center justify-center min-h-[300px]">
-              <h2 className="text-xl font-semibold mb-4 text-center">Balance insuficiente</h2>
-              <p className="text-center mb-2">
-                Para subir proyectos, necesitas tener al menos 10,000 tokens DRACMA.
+            <CardContent className="pt-6">
+              <p className="text-center text-muted-foreground">
+                Una vez que adquieras los tokens necesarios, podrás subir tu proyecto.
               </p>
-              <p className="text-center mb-6">
-                Tu balance actual: <span className="font-bold">{Number(balance).toLocaleString()} DRACMA</span>
-              </p>
-              <Button 
-                onClick={() => setShowInsufficientBalanceDialog(true)}
-                className="bg-gradient-to-r from-[#FF56BB] to-[#FF8F77] hover:from-[#FF56BB]/90 hover:to-[#FF8F77]/90"
-              >
-                Comprar tokens DRACMA
-              </Button>
             </CardContent>
           </Card>
-        </>
+        </div>
       );
     }
 

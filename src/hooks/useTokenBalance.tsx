@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { useAccount, useReadContract } from 'wagmi';
 import { formatUnits } from 'viem';
@@ -85,6 +84,7 @@ export const useDracmaBalance = () => {
   const [isHolder, setIsHolder] = useState(false);
   const [balance, setBalance] = useState("0");
   const [isLoading, setIsLoading] = useState(true);
+  const [showPurchaseMessage, setShowPurchaseMessage] = useState(false);
   
   // Contrato DRACMA en BSC
   const dracmaAddress = "0x8A9f07fdBc75144C9207373597136c6E280A872D";
@@ -113,6 +113,7 @@ export const useDracmaBalance = () => {
       setIsLoading(false);
       setBalance("0");
       setIsHolder(false);
+      setShowPurchaseMessage(false);
       return;
     }
 
@@ -129,37 +130,21 @@ export const useDracmaBalance = () => {
         // Verificar si el usuario tiene suficientes tokens
         const hasEnoughTokens = Number(formattedBalance) >= requiredAmount;
         setIsHolder(hasEnoughTokens);
+        setShowPurchaseMessage(!hasEnoughTokens); // Mostrar mensaje si no tiene suficientes tokens
         setIsLoading(false);
-
-        // Mostrar toast informativo si no tiene tokens
-        if (!hasEnoughTokens) {
-          toast({
-            title: "Tokens DRACMA insuficientes",
-            description: "Necesitas al menos 10,000 tokens DRACMA para subir proyectos.",
-            variant: "destructive",
-          });
-        }
       } catch (err) {
         console.error("Error processing balance data:", err);
         setIsLoading(false);
-        toast({
-          title: "Error al verificar balance",
-          description: "No se pudo verificar tu balance de tokens DRACMA. Por favor, intenta de nuevo.",
-          variant: "destructive",
-        });
+        setShowPurchaseMessage(true);
       }
     } else if (balanceError || decimalsError) {
       console.error("Error fetching balance:", balanceError || decimalsError);
       setIsLoading(false);
       setBalance("0");
       setIsHolder(false);
-      toast({
-        title: "Error de contrato",
-        description: "No se pudo conectar con el contrato de DRACMA. Asegúrate de estar en la red correcta.",
-        variant: "destructive",
-      });
+      setShowPurchaseMessage(true);
     }
-  }, [balanceData, decimalsData, balancePending, decimalsPending, isConnected, address, balanceError, decimalsError, toast]);
+  }, [balanceData, decimalsData, balancePending, decimalsPending, isConnected, address, balanceError, decimalsError]);
 
-  return { isHolder, balance, isLoading };
+  return { isHolder, balance, isLoading, showPurchaseMessage };
 };
