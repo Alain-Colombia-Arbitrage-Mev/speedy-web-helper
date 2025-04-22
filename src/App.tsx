@@ -13,6 +13,7 @@ import { WalletProvider } from "./components/providers/WalletProvider";
 import './i18n'; // Import i18n configuration
 import ProjectAlpha from "./pages/ProjectAlpha";
 import ProjectSubmission from "./pages/ProjectSubmission";
+import Tokenomics from "./pages/Tokenomics";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +31,7 @@ const App = () => (
                 <Route path="/projects" element={<Projects />} />
                 <Route path="/projects/alpha" element={<ProjectAlpha />} />
                 <Route path="/submit-project" element={<ProjectSubmission />} />
+                <Route path="/tokenomics" element={<Tokenomics />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </BrowserRouter>
