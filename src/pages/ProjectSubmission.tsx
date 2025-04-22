@@ -90,6 +90,9 @@ const ProjectSubmission = () => {
           <CardContent className="pt-6 flex flex-col items-center justify-center min-h-[300px]">
             <p className="text-center mb-6">Conecta tu wallet para verificar si eres elegible para subir proyectos.</p>
             <ConnectButton />
+            <p className="text-center text-muted-foreground mt-4">
+              Necesitas tener 10,000 DRACMA para ser elegible y subir proyectos.
+            </p>
           </CardContent>
         </Card>
       );
@@ -98,7 +101,10 @@ const ProjectSubmission = () => {
     if (!isHolder) {
       return (
         <div className="space-y-6">
-          <InsufficientBalanceMessage currentBalance={balance} />
+          <InsufficientBalanceMessage 
+            currentBalance={balance}
+            onClose={() => setShowInsufficientBalanceDialog(false)}
+          />
           <Card className={`${isDarkMode ? 'bg-gray-800 border-gray-700' : ''}`}>
             <CardContent className="pt-6">
               <p className="text-center text-muted-foreground">
